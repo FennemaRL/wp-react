@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+.logoWidth {
+  padding-top: 4px;
+  width: 225px;
+  opacity: 1;
+  transition: 0.5s;
+}
+figure:hover .logoWidth {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(
+    177deg,
+    rgba(124, 28, 28, 0.541),
+    rgba(29, 29, 136, 0.87)
+  );
+}
+#displayMobile {
+  display: none;
+}
+/* flex full screen*/
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+}
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
+a:hover {
+  text-shadow: rgb(129, 83, 23);
+}
