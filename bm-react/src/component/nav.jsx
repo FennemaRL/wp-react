@@ -14,9 +14,9 @@ class Nav extends Component {
           paddingBottom: "12px"
         }}
       >
-        <figure>
+        <a href="google.com">
           <img src={navLogo} className="logoWidth" alt="band-Maid logo" />
-        </figure>
+        </a>
         <p id="displayMobile">burger</p>
         <nav style={{ color: "white" }}>
           <ul>

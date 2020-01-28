@@ -22,11 +22,18 @@ figure:hover .logoWidth {
 header {
   display: flex;
   justify-content: space-between;
+  background: rgb(12, 9, 121);
+  background: linear-gradient(
+    191deg,
+    rgba(12, 9, 121, 0.8323704481792717) 35%,
+    rgba(255, 0, 69, 0.9500175070028011) 100%
+  );
+  /*
   background-image: linear-gradient(
     177deg,
     rgba(124, 28, 28, 0.541),
     rgba(29, 29, 136, 0.87)
-  );
+  );*/
 }
 #displayMobile {
   display: none;
@@ -35,6 +42,7 @@ header {
 header nav {
   display: flex;
   align-items: center;
+  padding-right: 50px;
 }
 header nav ul {
   list-style: none;
@@ -45,7 +53,10 @@ header nav ul {
 a {
   color: aliceblue;
   text-decoration: none;
+  transition: 0.5s;
+  font-weight: 500;
 }
 a:hover {
-  text-shadow: rgb(129, 83, 23);
+  opacity: 0.8;
+  transition: 0.5s;
 }
