@@ -4,23 +4,25 @@ import ig from "../img/socialMediaIcon/instagram.svg";
 import yt from "../img/socialMediaIcon/youtube.svg";
 import tw from "../img/socialMediaIcon/twitter.svg";
 import ad from "../img/arrowdown.svg";
+import Concerts from "./concerts";
+import LatestVideo from "./latestvideo";
 
 class Home extends Component {
   state = {
     socialMedias: [
       {
         srci: ig,
-        hf: "https://www.google.com.ar",
+        hf: "https://www.instagram.com/bandmaid.jp/",
         alti: "referencia a her instagram"
       },
       {
         srci: yt,
-        hf: "https://www.google.com.ar",
+        hf: "https://www.youtube.com/user/BANDMAID",
         alti: "referencia a her youtube"
       },
       {
         srci: tw,
-        hf: "https://www.google.com.ar",
+        hf: "https://twitter.com/bandmaid",
         alti: "referencia a her twitter"
       }
     ]
@@ -47,16 +49,23 @@ class Home extends Component {
               this.refs.secondS.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            <img src={ad} id="actionCall" alt="" />
+            <img src={ad} id="actionCall" alt="scrollToSecondSection" />
           </a>
         </div>
         {/*secondSection*/}
         <div
           className="secondSection"
           ref="secondS"
-          style={{ minHeight: "100vh" }}
+          style={{
+            minHeight: "80vh",
+            paddingTop: "50px",
+            backgroundColor: "black",
+            color: "white",
+            display: "flex"
+          }}
         >
-          <h1> Next live's</h1>
+          <Concerts />
+          <LatestVideo />
         </div>
       </div>
     );
