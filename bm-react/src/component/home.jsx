@@ -40,12 +40,22 @@ class Home extends Component {
         </div>
         {/*hero*/}
         <div className="bgPrincipal">
-          <a onClick="">
+          <a
+            href="/"
+            onClick={e => {
+              e.preventDefault();
+              this.refs.secondS.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <img src={ad} id="actionCall" alt="" />
           </a>
         </div>
         {/*secondSection*/}
-        <div className="secondSection" style={{ minHeight: "100vh" }}>
+        <div
+          className="secondSection"
+          ref="secondS"
+          style={{ minHeight: "100vh" }}
+        >
           <h1> Next live's</h1>
         </div>
       </div>
