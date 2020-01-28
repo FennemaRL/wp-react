@@ -4,7 +4,6 @@ import "./nav.css";
 import { Link, BrowserRouter } from "react-router-dom";
 
 class Nav extends Component {
-  state = {};
   render() {
     return (
       <header
@@ -14,15 +13,17 @@ class Nav extends Component {
           paddingBottom: "12px"
         }}
       >
-        <a href="google.com">
-          <img src={navLogo} className="logoWidth" alt="band-Maid logo" />
-        </a>
+        <BrowserRouter>
+          <Link to="/">
+            <img src={navLogo} className="logoWidth" alt="band-Maid logo" />
+          </Link>
+        </BrowserRouter>
         <p id="displayMobile">burger</p>
         <nav style={{ color: "white" }}>
           <ul>
             <BrowserRouter>
               <li>
-                <Link to="/">News</Link>
+                <Link to="/news">News</Link>
               </li>
               <li>
                 <Link to="/">Biography</Link>

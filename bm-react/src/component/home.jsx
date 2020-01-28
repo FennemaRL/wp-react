@@ -3,24 +3,50 @@ import "./home.css";
 import ig from "../img/socialMediaIcon/instagram.svg";
 import yt from "../img/socialMediaIcon/youtube.svg";
 import tw from "../img/socialMediaIcon/twitter.svg";
+import ad from "../img/arrowdown.svg";
+
 class Home extends Component {
-  state = {};
+  state = {
+    socialMedias: [
+      {
+        srci: ig,
+        hf: "https://www.google.com.ar",
+        alti: "referencia a her instagram"
+      },
+      {
+        srci: yt,
+        hf: "https://www.google.com.ar",
+        alti: "referencia a her youtube"
+      },
+      {
+        srci: tw,
+        hf: "https://www.google.com.ar",
+        alti: "referencia a her twitter"
+      }
+    ]
+  };
   render() {
     return (
       <div>
+        {/*mediabuttons*/}
         <div className="socialMedia">
-          <figure>
-            <img src={ig} alt="referencia a her instagram" />
-          </figure>
-          <figure>
-            <img src={yt} alt="referencia a her youtube" />
-          </figure>
-          <figure>
-            <img src={tw} alt="referencia a her twitter" />
-          </figure>
+          {this.state.socialMedias.map(obj => {
+            return (
+              <a href={obj.hf} key={obj.alti}>
+                <img src={obj.srci} alt={obj.alti} />
+              </a>
+            );
+          })}
         </div>
+        {/*hero*/}
         <div className="bgPrincipal">
-          <button id="actionCall">papa</button>
+          <a onClick="">
+            <img src={ad} id="actionCall" alt="" />
+          </a>
+        </div>
+        {/*secondSection*/}
+        <div className="secondSection" style={{ minHeight: "100vh" }}>
+          <h1> Next live's</h1>
         </div>
       </div>
     );
