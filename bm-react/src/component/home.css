@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide&display=swap");
+
 .bgPrincipal {
   min-height: 92.1vh;
   background-image: url("../img/band-maid-bg2.jpg");
@@ -14,9 +16,16 @@
 }
 .secondSection {
   min-height: 80vh;
-  padding-top: 50px;
   background-color: black;
   color: white;
+  text-align: center;
+  font-family: Audiowide, cursive;
+}
+.subSection {
+  padding-top: 50px;
+}
+.subSection h1 {
+  font-weight: 300;
 }
 .socialMedia a:hover img {
   opacity: 0.7;

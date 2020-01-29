@@ -20,7 +20,7 @@ class Components extends Component {
   render() {
     let concerts = this.state.concerts;
     return (
-      true && (
+      concerts.length && (
         <div className="concerts">
           <h1>Concerts</h1>
           <table>

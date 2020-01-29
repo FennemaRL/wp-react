@@ -54,8 +54,12 @@ class Home extends Component {
         </div>
         {/*secondSection*/}
         <div className="secondSection" ref="secondS">
-          <Concerts />
-          <LatestVideo />
+          <div className="subSection">
+            <Concerts />
+          </div>
+          <div className="subSection">
+            <LatestVideo />
+          </div>
         </div>
       </div>
     );
