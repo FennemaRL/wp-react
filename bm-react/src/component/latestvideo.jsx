@@ -3,7 +3,11 @@ import React, { Component } from "react";
 class LatestVideo extends Component {
   state = {};
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <h1>LatestVideo</h1>
+      </div>
+    );
   }
 }
 

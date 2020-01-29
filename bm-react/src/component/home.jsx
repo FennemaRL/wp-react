@@ -53,17 +53,7 @@ class Home extends Component {
           </a>
         </div>
         {/*secondSection*/}
-        <div
-          className="secondSection"
-          ref="secondS"
-          style={{
-            minHeight: "80vh",
-            paddingTop: "50px",
-            backgroundColor: "black",
-            color: "white",
-            display: "flex"
-          }}
-        >
+        <div className="secondSection" ref="secondS">
           <Concerts />
           <LatestVideo />
         </div>

@@ -1,15 +1,29 @@
 import React, { Component } from "react";
+import "./concerts.css";
 
 class Components extends Component {
-  state = { concerts: [{ date: "19 / 1 / 2020", place: "Aliern square" }] };
+  state = {
+    concerts: [
+      { date: "10.1.2020", place: "Diamon Hall" },
+      { date: "11.1.2020", place: "Kobe Harbor Studio" },
+      { date: "18.1.2020", place: "Caparvo Hall" },
+      { date: "13.2.2020", place: "Shibuya Public Hall" },
+      { date: "14.2.2020", place: "Shibuya Public Hall" },
+      { date: "23.3.2020", place: "KnotFest" },
+      { date: "15.05.2020", place: "Bggb" },
+      { date: "16.05.2020", place: "Bggb" },
+      { date: "17 .05.2020", place: "Bggb" },
+      { date: "16.05.2020", place: "Music festival" }
+    ]
+  };
   /*call api for recopile data about next concerts*/
   render() {
     let concerts = this.state.concerts;
     return (
       true && (
-        <div style={{ width: "80%", marginLeft: "10%", textAlign: "center" }}>
+        <div className="concerts">
           <h1>Concerts</h1>
-          <table style={{ width: "80wh" }}>
+          <table>
             <thead>
               <tr>
                 <th>Date</th>
@@ -21,7 +35,7 @@ class Components extends Component {
                 return (
                   <React.Fragment key={k}>
                     <tr>
-                      <td>{concert.date}</td>
+                      <td className="dated">{concert.date}</td>
                       <td>{concert.place}</td>
                     </tr>
                   </React.Fragment>
