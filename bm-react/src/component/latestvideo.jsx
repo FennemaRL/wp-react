@@ -1,23 +1,22 @@
 import React, { Component } from "react";
 import axios from "axios";
 import YouTube from "react-youtube";
-import k from "../component/k.env";
+
 class LatestVideo extends Component {
   state = {
     videos: []
   };
   componentDidMount() {
+    let kg = process.env.REACT_APP_GK;
+    let bmuid = process.env.REACT_APP_bmuid;
     axios
       .get(
-        `https://www.googleapis.com/youtube/v3/search?key=${k.gk}&channelId=${k.bmuid}&part=snippet,id&order=date&maxResults=1`
+        `https://www.googleapis.com/youtube/v3/search?key=${kg}&channelId=${bmuid}&part=snippet,id&order=date&maxResults=1`
       )
       .then(res => {
         this.setState({ videos: res.data.items });
-        console.log(this);
       })
-      .catch(e => {
-        console.error({ status: "malo", res: e });
-      });
+      .catch(e => console.error(e));
   }
 
   render() {
