@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import navLogo from "../img/logo-bandmaid.png";
 import "./nav.css";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Nav extends Component {
   render() {
@@ -13,28 +13,22 @@ class Nav extends Component {
           paddingBottom: "12px"
         }}
       >
-        <BrowserRouter>
-          <Link to="/">
-            <img src={navLogo} className="logoWidth" alt="band-Maid logo" />
-          </Link>
-        </BrowserRouter>
+        {" "}
+        <Link to="/">
+          <img src={navLogo} className="logoWidth" alt="band-Maid logo" />
+        </Link>
         <p id="displayMobile">burger</p>
         <nav style={{ color: "white" }}>
           <ul>
-            <BrowserRouter>
-              <li>
-                <Link to="/news">News</Link>
-              </li>
-              <li>
-                <Link to="/">Biography</Link>
-              </li>
-              <li>
-                <Link to="/">Concert</Link>
-              </li>
-              <li>
-                <Link to="/">Discography</Link>
-              </li>
-            </BrowserRouter>
+            <li>
+              <Link to="/Biography">Biography</Link>
+            </li>
+            <li>
+              <Link to="/">Listen Us</Link>
+            </li>
+            <li>
+              <Link to="/Discography">Discography</Link>
+            </li>
           </ul>
         </nav>
       </header>

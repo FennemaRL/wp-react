@@ -74,13 +74,32 @@ div .socialMedia {
   color: white;
   text-align: center;
   font-family: Audiowide, cursive;
+
+  background: radial-gradient(circle, transparent 5%, var(--color-v) 30%),
+    linear-gradient(to right, var(--color), var(--color)), var(--image);
+  background-blend-mode: var(--blend-top, normal),
+    var(--blend-bottom, saturation), normal;
+
+  --image: url("../img/bgsecondsection.jpg");
+
+  --color-v: rgba(0, 0, 0, 0.781);
+  --color: rgba(128, 128, 128, 0.836);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .subSection {
   padding-top: 50px;
 }
 .subSection h1 {
   font-weight: 300;
 }
-.react-player iframe {
-  height: 40vh !important;
+footer {
+  display: flex;
+  align-items: center;
+  background-color: #1c1d18;
+  min-height: 5vh;
+  color: aliceblue;
+
+  justify-content: space-around;
 }

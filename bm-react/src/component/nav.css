@@ -1,12 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  height: 100%;
-}
 .logoWidth {
   padding-top: 4px;
   width: 225px;
@@ -26,11 +17,27 @@ header {
   z-index: 3;
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(
-    191deg,
-    rgba(17, 40, 141, 0.984) 50%,
-    rgba(255, 0, 69, 0.9800175070028011)
-  );
+  background: linear-gradient(-170deg, black, #752644, #201f58, #752644, black);
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  40% {
+    background-position: 30% 70%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  60% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 #displayMobile {
   display: none;

@@ -1,23 +1,32 @@
 import React from "react";
-import "./App.css";
 import Home from "./component/home";
 import Nav from "./component/nav";
-import New from "./component/new";
 import Footer from "./component/footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Biography from "./component/biography";
+import Music from "./component/music";
+import Discography from "./component/dicography";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Nav />
-      <Router>
+    <Router>
+      <div>
+        <Nav />
         <Switch>
-          <Route path="/news" component={New} />
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Biography" component={Biography} />
+          <Route exact path="/Music" component={Music} />
+          <Route exact path="/Discography" component={Discography} />
+          <Redirect to="/" />
         </Switch>
-      </Router>
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
