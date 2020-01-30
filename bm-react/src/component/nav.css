@@ -20,20 +20,17 @@ figure:hover .logoWidth {
 }
 
 header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
-  background: rgb(12, 9, 121);
   background: linear-gradient(
     191deg,
-    rgba(12, 9, 121, 0.8323704481792717) 35%,
-    rgba(255, 0, 69, 0.9500175070028011) 100%
+    rgba(17, 40, 141, 0.984) 50%,
+    rgba(255, 0, 69, 0.9800175070028011)
   );
-  /*
-  background-image: linear-gradient(
-    177deg,
-    rgba(124, 28, 28, 0.541),
-    rgba(29, 29, 136, 0.87)
-  );*/
 }
 #displayMobile {
   display: none;

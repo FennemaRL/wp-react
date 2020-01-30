@@ -4,7 +4,7 @@ class Footer extends Component {
   state = {};
   render() {
     return (
-      <div style={{ backgroundColor: "#1c1d18", minHeight: "20vh" }}></div>
+      <div style={{ backgroundColor: "#1c1d18", minHeight: "10vh" }}></div>
     );
   }
 }

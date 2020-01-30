@@ -6,6 +6,7 @@ import tw from "../img/socialMediaIcon/twitter.svg";
 import ad from "../img/arrowdown.svg";
 import Concerts from "./concerts";
 import LatestVideo from "./latestvideo";
+import Merch from "./merch";
 
 class Home extends Component {
   state = {
@@ -25,7 +26,8 @@ class Home extends Component {
         hf: "https://twitter.com/bandmaid",
         alti: "referencia a her twitter"
       }
-    ]
+    ],
+    secondSref: React.createRef()
   };
   render() {
     return (
@@ -40,25 +42,28 @@ class Home extends Component {
             );
           })}
         </div>
-        {/*hero*/}
-        <div className="bgPrincipal">
+        {/*hero */}
+        <div className="bgPrincipal" ref="endPrincipal">
           <a
             href="/"
             onClick={e => {
               e.preventDefault();
-              this.refs.secondS.scrollIntoView({ behavior: "smooth" });
+              this.secondSref.julie.scrollIntoView(true);
             }}
           >
             <img src={ad} id="actionCall" alt="scrollToSecondSection" />
           </a>
         </div>
         {/*secondSection*/}
-        <div className="secondSection" ref="secondS">
+        <div className="secondSection" ref={this.secondSref}>
           <div className="subSection">
             <Concerts />
           </div>
           <div className="subSection">
             <LatestVideo />
+          </div>
+          <div className="subSection">
+            <Merch />
           </div>
         </div>
       </div>

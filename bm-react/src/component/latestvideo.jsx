@@ -24,15 +24,15 @@ class LatestVideo extends Component {
     return (
       <div>
         <h1>LatestVideo</h1>
-        <div style={{ paddingTop: "30px", paddingBottom: "30px" }}>
+        <div style={{ paddingTop: "25px" }}>
           {videos.length &&
             videos.map(video => {
               return (
                 <YouTube
                   videoId={video.id.videoId}
                   opts={{
-                    height: "390",
-                    width: "640",
+                    height: "450px",
+                    width: "65%",
                     playerVars: {
                       autoplay: 0
                     }

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide&display=swap");
 
 .bgPrincipal {
-  min-height: 92.1vh;
+  min-height: 100vh;
   background-image: url("../img/band-maid-bg2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,19 +14,10 @@
   z-index: 2;
   margin: 0;
 }
-.secondSection {
-  min-height: 80vh;
-  background-color: black;
-  color: white;
-  text-align: center;
-  font-family: Audiowide, cursive;
+#actionCall {
+  width: 40px;
 }
-.subSection {
-  padding-top: 50px;
-}
-.subSection h1 {
-  font-weight: 300;
-}
+
 .socialMedia a:hover img {
   opacity: 0.7;
 }
@@ -46,11 +37,10 @@ div .socialMedia {
   -webkit-filter: invert(1);
   filter: invert(1);
 }
-
 #actionCall {
   animation-duration: 3s;
   animation-name: bounce;
-  animation-iteration-count: 10;
+  animation-iteration-count: 18;
   animation-timing-function: ease;
   -webkit-filter: invert(1);
   filter: invert(1);
@@ -77,4 +67,20 @@ div .socialMedia {
   100% {
     transform: scale(1, 1) translateY(0);
   }
+}
+
+.secondSection {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: Audiowide, cursive;
+}
+.subSection {
+  padding-top: 50px;
+}
+.subSection h1 {
+  font-weight: 300;
+}
+.react-player iframe {
+  height: 40vh !important;
 }
