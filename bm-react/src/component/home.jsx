@@ -9,26 +9,31 @@ import LatestVideo from "./latestvideo";
 import Merch from "./merch";
 
 class Home extends Component {
-  state = {
-    socialMedias: [
-      {
-        srci: ig,
-        hf: "https://www.instagram.com/bandmaid.jp/",
-        alti: "referencia a her instagram"
-      },
-      {
-        srci: yt,
-        hf: "https://www.youtube.com/user/BANDMAID",
-        alti: "referencia a her youtube"
-      },
-      {
-        srci: tw,
-        hf: "https://twitter.com/bandmaid",
-        alti: "referencia a her twitter"
-      }
-    ],
-    secondSref: React.createRef()
-  };
+  constructor(props) {
+    super(props);
+    this.secondSref = React.createRef();
+    this.state = {
+      socialMedias: [
+        {
+          srci: ig,
+          hf: "https://www.instagram.com/bandmaid.jp/",
+          alti: "referencia a her instagram"
+        },
+        {
+          srci: yt,
+          hf: "https://www.youtube.com/user/BANDMAID",
+          alti: "referencia a her youtube"
+        },
+        {
+          srci: tw,
+          hf: "https://twitter.com/bandmaid",
+          alti: "referencia a her twitter"
+        }
+      ],
+      headerHeight: 0
+    };
+  }
+
   render() {
     return (
       <div>
@@ -43,12 +48,15 @@ class Home extends Component {
           })}
         </div>
         {/*hero */}
-        <div className="bgPrincipal" ref="endPrincipal">
+        <div className="bgPrincipal">
           <a
             href="/"
             onClick={e => {
               e.preventDefault();
-              this.secondSref.julie.scrollIntoView(true);
+              window.scrollTo({
+                top: this.secondSref.current.offsetTop - 72.8 /*a mejorar */,
+                behavior: "smooth"
+              });
             }}
           >
             <img src={ad} id="actionCall" alt="scrollToSecondSection" />
