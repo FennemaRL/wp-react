@@ -21,7 +21,6 @@ class merch extends Component {
           {this.state.stores.map(store => {
             return (
               <a href={store.srcs} key={store.srcs}>
-                <h3></h3>
                 <img
                   src={store.img}
                   alt="link to the shop where you can find our merchandising"

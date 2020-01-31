@@ -4,7 +4,7 @@ import Nav from "./component/nav";
 import Footer from "./component/footer";
 import Biography from "./component/biography";
 import Music from "./component/music";
-import Discography from "./component/dicography";
+import Discography from "./component/discography";
 import {
   BrowserRouter as Router,
   Switch,

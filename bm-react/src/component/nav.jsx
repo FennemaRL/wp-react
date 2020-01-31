@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import navLogo from "../img/logo-bandmaid.png";
 import "./nav.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+const navlinkStile = {
+  textDecorationLine: "underline"
+};
 
 class Nav extends Component {
   render() {
@@ -14,20 +18,26 @@ class Nav extends Component {
         }}
       >
         {" "}
-        <Link to="/">
+        <NavLink to="/">
           <img src={navLogo} className="logoWidth" alt="band-Maid logo" />
-        </Link>
+        </NavLink>
         <p id="displayMobile">burger</p>
         <nav style={{ color: "white" }}>
           <ul>
             <li>
-              <Link to="/Biography">Biography</Link>
+              <NavLink activeStyle={navlinkStile} to="/Biography">
+                Biography
+              </NavLink>
             </li>
             <li>
-              <Link to="/">Listen Us</Link>
+              <NavLink activeStyle={navlinkStile} to="/music">
+                Listen Us
+              </NavLink>
             </li>
             <li>
-              <Link to="/Discography">Discography</Link>
+              <NavLink activeStyle={navlinkStile} to="/Discography">
+                Discography
+              </NavLink>
             </li>
           </ul>
         </nav>
