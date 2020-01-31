@@ -74,7 +74,8 @@ div .socialMedia {
   color: white;
   text-align: center;
   font-family: Audiowide, cursive;
-
+}
+.secondSection .group {
   background: radial-gradient(circle, transparent 5%, var(--color-v) 30%),
     linear-gradient(to right, var(--color), var(--color)), var(--image);
   background-blend-mode: var(--blend-top, normal),

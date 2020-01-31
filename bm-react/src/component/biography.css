@@ -16,7 +16,7 @@ div .bio {
 
 .composeImgWithDescription {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .composeImgWithDescription img {
   width: 30vw;
@@ -29,7 +29,10 @@ div .bio {
 }
 .memberStyle .composeImgWithDescription img {
   /* members images*/
-  width: 15vw;
+  width: 25vw;
+}
+.memberStyle .composeImgWithDescription .texthp {
+  width: 20%;
 }
 h3 {
   font-weight: 400;

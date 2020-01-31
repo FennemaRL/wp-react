@@ -67,11 +67,13 @@ class Home extends Component {
           <div className="subSection">
             <Concerts />
           </div>
-          <div className="subSection">
-            <LatestVideo />
-          </div>
-          <div className="subSection">
-            <Merch />
+          <div className="group">
+            <div className="subSection">
+              <LatestVideo />
+            </div>
+            <div className="subSection">
+              <Merch />
+            </div>
           </div>
         </div>
       </div>
