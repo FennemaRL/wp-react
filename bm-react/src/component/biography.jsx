@@ -1,8 +1,18 @@
 import React, { Component } from "react";
 import "./biography.css";
 import bmwd from "../img/history-bm.jpg";
+
 import saikimg from "../img/members/saiki.jpg";
+import kanaimg from "../img/members/kanami2.jpg";
+import akaneimg from "../img/members/akane2.jpg";
+import misaimg from "../img/members/misa2.jpg";
+import mikuimg from "../img/members/miku2.jpg";
+
 import icosaiki from "../img/members/icosaiki.png";
+import icokanami from "../img/members/icokanami.png";
+import icomisa from "../img/members/icomisa.png";
+import icoakane from "../img/members/icoakane.png";
+import icomiku from "../img/members/icokuruppo.png";
 class Biography extends Component {
   state = {
     members: [
@@ -11,7 +21,43 @@ class Biography extends Component {
         image: saikimg,
         description: "",
         ico: icosaiki,
-        roll: "Principal voice",
+        roll: "Main voice",
+        twt: "saiki_bandmaid",
+        ig: "saiki_bandmaid/"
+      },
+      {
+        name: "Kanami",
+        image: kanaimg,
+        description: "",
+        ico: icokanami,
+        roll: "Main guitar",
+        twt: "saiki_bandmaid",
+        ig: "saiki_bandmaid/"
+      },
+      {
+        name: "Miku",
+        image: mikuimg,
+        description: "",
+        ico: icomiku,
+        roll: "Voice/Guitar",
+        twt: "saiki_bandmaid",
+        ig: "saiki_bandmaid/"
+      },
+      {
+        name: "Misa",
+        image: misaimg,
+        description: "",
+        ico: icomisa,
+        roll: "Bass",
+        twt: "saiki_bandmaid",
+        ig: "saiki_bandmaid/"
+      },
+      {
+        name: "Akane",
+        image: akaneimg,
+        description: "",
+        ico: icoakane,
+        roll: "Drums",
         twt: "saiki_bandmaid",
         ig: "saiki_bandmaid/"
       }
@@ -20,10 +66,7 @@ class Biography extends Component {
   render() {
     let members = this.state.members;
     return (
-      <div
-        className="bio"
-        style={{ paddingTop: "14vh", textAlign: "center", minHeight: "80.4vh" }}
-      >
+      <div className="bio">
         <h1>Biography</h1>
         <div className="Principal">
           <div className="composeImgWithDescription">
@@ -43,7 +86,7 @@ class Biography extends Component {
               </p>
             </div>
           </div>
-          <h4>Members</h4>
+          <h2>Members</h2>
           {members.map(member => {
             return (
               <div key={member.name} className="memberStyle">

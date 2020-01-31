@@ -17,7 +17,7 @@ header {
   z-index: 3;
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(-170deg, black, #752644, #201f58, black);
+  background: linear-gradient(-170deg, black, #201f58, #752644, black);
   background-size: 300% 300%;
   animation: gradient 20s ease infinite;
 }
@@ -30,10 +30,13 @@ header {
     background-position: 30% 70%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 40% 40%;
   }
   60% {
-    background-position: 50% 50%;
+    background-position: 70% 30%;
+  }
+  80% {
+    background-position: 100% 50%;
   }
   100% {
     background-position: 0% 50%;

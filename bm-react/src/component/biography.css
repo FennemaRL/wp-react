@@ -1,10 +1,18 @@
+h1,
+h2,
+h4,
+h5 {
+  font-weight: 300;
+}
 div .bio {
   font-family: Audiowide, cursive;
   background-color: black;
   color: white;
+  padding: 14vh 0 2vh 0;
+  text-align: center;
+  min-height: 80.4vh;
 }
 .bio h1 {
-  font-weight: 300;
   font-size: 2em;
 }
 .Principal {
@@ -13,7 +21,9 @@ div .bio {
   width: 80%;
   padding: 20px;
 }
-
+.composeImgWithDescription:first-child {
+  background-color: black;
+}
 .composeImgWithDescription {
   display: flex;
   justify-content: center;
@@ -27,21 +37,7 @@ div .bio {
   padding-left: 30px;
   font-weight: 200;
 }
-.memberStyle .composeImgWithDescription img {
-  /* members images*/
-  width: 25vw;
-}
-.memberStyle .composeImgWithDescription .texthp {
-  width: 20%;
-}
-h3 {
-  font-weight: 400;
-}
-h1,
-h5,
-h4 {
-  font-weight: 300;
-}
+
 .composeImgWithDescription .texthp hr {
   margin-left: 0px;
   width: 80%;
@@ -52,11 +48,28 @@ h4 {
   line-height: 200%;
   font-size: 0.9em;
 }
+.memberStyle {
+  padding: 15px;
+}
 .memberStyle .title {
   margin-left: 35%;
   width: 30%;
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 15px;
+  align-items: center;
   color: #fff301;
+}
+.memberStyle .title .ico {
+  width: 10%;
+}
+.memberStyle:nth-child(even) .composeImgWithDescription {
+  flex-direction: row-reverse;
+}
+.memberStyle .composeImgWithDescription img {
+  /* members images*/
+  width: 25vw;
+}
+.memberStyle .composeImgWithDescription .texthp {
+  width: 20%;
 }
