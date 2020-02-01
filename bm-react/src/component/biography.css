@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400&display=swap");
 h1,
 h2,
+h3,
 h4,
 h5 {
   font-weight: 300;
@@ -11,6 +13,9 @@ div .bio {
   padding: 14vh 0 2vh 0;
   text-align: center;
   min-height: 80.4vh;
+}
+p {
+  font-family: "Roboto Condensed", sans-serif;
 }
 .bio h1 {
   font-size: 2em;
@@ -35,6 +40,7 @@ div .bio {
   width: 100%;
   text-align: left;
   padding-left: 30px;
+  padding-right: 30px;
   font-weight: 200;
 }
 
@@ -61,15 +67,21 @@ div .bio {
   color: #fff301;
 }
 .memberStyle .title .ico {
-  width: 10%;
+  width: 30px;
 }
 .memberStyle:nth-child(even) .composeImgWithDescription {
   flex-direction: row-reverse;
 }
-.memberStyle .composeImgWithDescription img {
+.memberStyle .composeImgWithDescription .photo {
   /* members images*/
   width: 25vw;
 }
 .memberStyle .composeImgWithDescription .texthp {
-  width: 20%;
+  width: 40%;
+}
+.memberStyle .composeImgWithDescription .socialMediaIcon {
+  width: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  filter: invert(1);
 }
