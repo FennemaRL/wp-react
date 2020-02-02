@@ -6,13 +6,15 @@ h4,
 h5 {
   font-weight: 300;
 }
-div .bio {
+
+div .container {
+  /*this styles are shared between biography discography and music even if not all import this file*/
   font-family: Audiowide, cursive;
   background-color: black;
   color: white;
   padding: 14vh 0 2vh 0;
   text-align: center;
-  min-height: 80.4vh;
+  min-height: 78.9vh;
 }
 p {
   font-family: "Roboto Condensed", sans-serif;
@@ -20,12 +22,17 @@ p {
 .bio h1 {
   font-size: 2em;
 }
-.Principal {
+.principal {
   background-color: #1c1d18;
   margin-left: 10%;
   width: 80%;
   padding: 20px;
 }
+.disco {
+  margin-left: 27%;
+  width: 45%;
+}
+
 .composeImgWithDescription:first-child {
   background-color: black;
 }

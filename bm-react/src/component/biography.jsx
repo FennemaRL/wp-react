@@ -85,9 +85,9 @@ class Biography extends Component {
   render() {
     let members = this.state.members;
     return (
-      <div className="bio">
+      <div className="container">
         <h1>Biography</h1>
-        <div className="Principal">
+        <div className="principal">
           <div className="composeImgWithDescription">
             <img src={bmwd} alt="band maid - word domination tour" />
             <div className="texthp">
