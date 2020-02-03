@@ -1,4 +1,4 @@
-async function tokenSpotify() {
+function tokenSpotify() {
   if (!localStorage.getItem("tokenBM")) {
     let key = process.env.REACT_APP_SK;
     let myHeaders = new Headers();
@@ -14,13 +14,11 @@ async function tokenSpotify() {
       body: urlencoded,
       redirect: "follow"
     };
-    fetch("https://accounts.spotify.com/api/token", requestOptions)
+    return fetch("https://accounts.spotify.com/api/token", requestOptions)
       .then(response => response.text())
       .then(result => {
         let res = JSON.parse(result);
         localStorage.setItem("tokenBM", res.access_token);
-        console.log("ya se guardo");
-        console.log(res.access_token);
       })
       .catch(error => console.error(error));
   }
