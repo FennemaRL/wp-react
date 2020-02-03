@@ -23,6 +23,7 @@ p {
   font-size: 2em;
 }
 .principal {
+  /*the same as above*/
   background-color: #1c1d18;
   margin-left: 10%;
   width: 80%;
