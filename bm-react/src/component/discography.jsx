@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import tokenSpotify from "./auth";
+import "./discography.css";
 class Discography extends Component {
-  state = { albums: [] };
+  state = {
+    albums: []
+  };
 
   async getAlbums(artists, firstTry = true) {
     let key =
@@ -27,7 +30,6 @@ class Discography extends Component {
           throw resultobj.error;
         }
         let albumsd = resultobj.items;
-        console.log(albumsd);
         this.setState({
           albums: this.state.albums.concat(
             albumsd.reduce(
@@ -55,7 +57,6 @@ class Discography extends Component {
         }
       });
   }
-
   componentDidMount() {
     this.getAlbums("5Wh3G01Xfxn2zzEZNpuYHH");
     this.getAlbums("2OIN4qI2EqAsEhrVlnfi02");
@@ -64,13 +65,14 @@ class Discography extends Component {
     return (
       <div className="container">
         <h1>Discography</h1>
-        <div className="principal disco">
+        <div className="filters"></div>
+        <div className="principal albums">
           {this.state.albums.map(album => {
             return (
-              <div key={album.name + " " + Date.now()}>
+              <div key={album.name} className="album" style={album.filterStyle}>
+                <img src={album.images[0].url} alt="album cover" />
                 <p>{album.name}</p>
-                <img src={album.images[2].url} alt="" />
-                <p>{album.release_date}</p>
+                <p className="date">{album.release_date}</p>
               </div>
             );
           })}
