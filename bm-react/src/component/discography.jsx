@@ -3,7 +3,12 @@ import tokenSpotify from "./auth";
 import "./discography.css";
 class Discography extends Component {
   state = {
-    albums: []
+    albums: [],
+    filters: [
+      { type: "none", active: true },
+      { type: "album", active: false },
+      { type: "single", active: false }
+    ]
   };
 
   async getAlbums(artists, firstTry = true) {
@@ -61,18 +66,54 @@ class Discography extends Component {
     this.getAlbums("5Wh3G01Xfxn2zzEZNpuYHH");
     this.getAlbums("2OIN4qI2EqAsEhrVlnfi02");
   }
+  filterFunc(filter) {
+    if (filter.active) return;
+
+    let filtersmod = this.state.filters.map(filterunmod =>
+      filterunmod.type === filter.type
+        ? { ...filterunmod, active: true }
+        : { ...filterunmod, active: false }
+    );
+    console.log(this.state.albums);
+    let functfilter =
+      filter.type === "none"
+        ? a => true
+        : filter2comparetype => filter.type === filter2comparetype;
+    let albumsfilters = this.state.albums.map(album =>
+      functfilter(album.album_type)
+        ? { ...album, filterStyle: { display: undefined } }
+        : { ...album, filterStyle: { display: "none" } }
+    );
+    this.setState({ filters: filtersmod, albums: albumsfilters });
+  }
   render() {
     return (
       <div className="container">
         <h1>Discography</h1>
-        <div className="filters"></div>
+        <div className="filters">
+          {this.state.filters.map(filter => {
+            return (
+              <a
+                href={`filter albums by ${filter.type}`}
+                key={filter.type}
+                style={filter.active ? { color: "#fff301" } : {}}
+                onClick={e => {
+                  e.preventDefault();
+                  this.filterFunc(filter);
+                }}
+              >
+                {filter.type}
+              </a>
+            );
+          })}
+        </div>
         <div className="principal albums">
           {this.state.albums.map(album => {
             return (
               <div key={album.name} className="album" style={album.filterStyle}>
                 <img src={album.images[0].url} alt="album cover" />
                 <p>{album.name}</p>
-                <p className="date">{album.release_date}</p>
+                <p className="color">{album.release_date}</p>
               </div>
             );
           })}
