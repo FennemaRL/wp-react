@@ -20,6 +20,10 @@ header {
   background: linear-gradient(-170deg, black, #201f58, #752644, black);
   background-size: 300% 300%;
   animation: gradient 20s ease infinite;
+
+  padding-top: 14px;
+  padding-left: 30px;
+  padding-bottom: 12px;
 }
 
 @keyframes gradient {
@@ -41,9 +45,6 @@ header {
   100% {
     background-position: 0% 50%;
   }
-}
-#displayMobile {
-  display: none;
 }
 /* flex full screen*/
 header .space {
@@ -72,4 +73,52 @@ a {
 a:hover {
   opacity: 0.8;
   transition: 0.5s;
+}
+.buttonToggle {
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+
+  margin: 7px 1rem;
+}
+.buttonToggle:focus {
+  outline: none;
+}
+.buttonToggle .line {
+  background-color: white;
+  width: 20px;
+  height: 2px;
+}
+
+@media screen and (max-width: 48em) {
+  header .logoWrap {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0px;
+  }
+  header .buttonToggle {
+    flex: 0.2;
+  }
+  .space {
+    display: none;
+  }
+  header nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 48em) {
+  header nav {
+    display: flex;
+  }
+  .buttonToggle {
+    display: none;
+  }
 }

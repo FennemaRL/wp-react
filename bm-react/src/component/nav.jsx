@@ -9,15 +9,8 @@ const navlinkStile = {
 
 const Nav = () => {
   return (
-    <header
-      style={{
-        paddingTop: "14px",
-        paddingLeft: "30px",
-        paddingBottom: "12px"
-      }}
-    >
-      {" "}
-      <NavLink to="/">
+    <header>
+      <NavLink to="/" className="logoWrap">
         <img src={navLogo} className="logoWidth" alt="band-Maid logo" />
       </NavLink>
       <div className="space"></div>
@@ -40,6 +33,11 @@ const Nav = () => {
           </li>
         </ul>
       </nav>
+      <button className="buttonToggle">
+        <div className="line" />
+        <div className="line" />
+        <div className="line" />
+      </button>
     </header>
   );
 };
