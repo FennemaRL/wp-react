@@ -10,6 +10,7 @@
   flex: 0 0 17%;
   margin: 5px;
   text-align: left;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .album img {

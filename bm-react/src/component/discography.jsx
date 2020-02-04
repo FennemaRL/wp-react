@@ -5,7 +5,7 @@ class Discography extends Component {
   state = {
     albums: [],
     filters: [
-      { type: "none", active: true },
+      { type: "all", active: true },
       { type: "album", active: false },
       { type: "single", active: false }
     ]
@@ -74,15 +74,28 @@ class Discography extends Component {
         ? { ...filterunmod, active: true }
         : { ...filterunmod, active: false }
     );
-    console.log(this.state.albums);
     let functfilter =
-      filter.type === "none"
+      filter.type === "all"
         ? a => true
         : filter2comparetype => filter.type === filter2comparetype;
     let albumsfilters = this.state.albums.map(album =>
       functfilter(album.album_type)
-        ? { ...album, filterStyle: { display: undefined } }
-        : { ...album, filterStyle: { display: "none" } }
+        ? {
+            ...album,
+            filterStyle: {
+              display: "block",
+              opacity: "1",
+              transition: "visibility 0s, opacity 0.5s linear"
+            }
+          }
+        : {
+            ...album,
+            filterStyle: {
+              visibility: "hidden",
+              opacity: "0",
+              display: "none"
+            }
+          }
     );
     this.setState({ filters: filtersmod, albums: albumsfilters });
   }
