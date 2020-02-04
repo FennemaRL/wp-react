@@ -21,8 +21,8 @@ class Nav extends Component {
         <NavLink to="/">
           <img src={navLogo} className="logoWidth" alt="band-Maid logo" />
         </NavLink>
-        <p id="displayMobile">burger</p>
-        <nav style={{ color: "white" }}>
+        <div className="space"></div>
+        <nav>
           <ul>
             <li>
               <NavLink activeStyle={navlinkStile} to="/Biography">

@@ -9,7 +9,7 @@ class Music extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Biography</h1>
+        <h1>Music</h1>
         <div className="principal">
           <iframe
             ref={this.spotyref}
