@@ -96,6 +96,15 @@ div .socialMedia {
 .subSection h1 {
   font-weight: 300;
 }
+.merch {
+  padding-bottom: 50px;
+}
+.merch div {
+  display: flex;
+}
+.merch div a img {
+  width: 80%;
+}
 footer {
   display: flex;
   align-items: center;
@@ -125,5 +134,8 @@ footer {
     padding: 0;
     text-align: center;
     font-size: 1em;
+  }
+  .merch div {
+    flex-wrap: wrap;
   }
 }

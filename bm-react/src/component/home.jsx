@@ -29,8 +29,7 @@ class Home extends Component {
           hf: "https://twitter.com/bandmaid",
           alti: "referencia a her twitter"
         }
-      ],
-      headerHeight: 0
+      ]
     };
   }
 

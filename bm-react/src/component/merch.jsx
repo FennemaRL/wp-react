@@ -10,21 +10,15 @@ class merch extends Component {
   };
   render() {
     return (
-      <div style={{ paddingBottom: "50px" }}>
+      <div className="merch">
         <h1>Merch</h1>
-        <div
-          style={{
-            textAlign: "center",
-            display: "inline"
-          }}
-        >
+        <div>
           {this.state.stores.map(store => {
             return (
-              <a href={store.srcs} key={store.srcs}>
+              <a href={store.srcs} key={store.srcs} className="merchImg">
                 <img
                   src={store.img}
                   alt="link to the shop where you can find our merchandising"
-                  style={{ width: "35%", padding: "15px" }}
                 />
               </a>
             );
