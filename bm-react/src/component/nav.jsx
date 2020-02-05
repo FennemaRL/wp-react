@@ -7,7 +7,7 @@ const navlinkStile = {
   textDecorationLine: "underline"
 };
 
-const Nav = () => {
+const Nav = props => {
   return (
     <header>
       <NavLink to="/" className="logoWrap">
@@ -33,7 +33,7 @@ const Nav = () => {
           </li>
         </ul>
       </nav>
-      <button className="buttonToggle">
+      <button className="buttonToggle" onClick={props.togglelateralM}>
         <div className="line" />
         <div className="line" />
         <div className="line" />

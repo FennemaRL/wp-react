@@ -50,6 +50,7 @@ class Home extends Component {
         {/*hero */}
         <div className="bgPrincipal">
           <a
+            className="dropdown"
             href="/"
             onClick={e => {
               e.preventDefault();

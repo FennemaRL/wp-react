@@ -105,3 +105,20 @@ footer {
 
   justify-content: space-around;
 }
+
+@media screen and (max-width: 48em) {
+  .bgPrincipal {
+    margin-top: 69px;
+    min-height: 26vh;
+  }
+  .secondSection {
+    padding: 0px 0px;
+  }
+  .subSection {
+    padding-top: 10px;
+    padding-left: 0px;
+  }
+  .dropdown {
+    display: none;
+  }
+}
