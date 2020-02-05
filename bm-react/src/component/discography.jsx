@@ -102,7 +102,7 @@ class Discography extends Component {
   render() {
     return (
       <div className="container">
-        <h1>discography</h1>
+        <h1>Discography</h1>
         <div className="filters">
           {this.state.filters.map(filter => {
             return (

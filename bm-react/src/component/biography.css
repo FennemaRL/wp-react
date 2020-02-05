@@ -92,3 +92,55 @@ p {
   padding-right: 5px;
   filter: invert(1);
 }
+
+@media screen and (max-width: 48em) {
+  * {
+    margin: 0;
+  }
+  .principal {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  .composeImgWithDescription {
+    padding: 0;
+    display: inline;
+  }
+  .composeImgWithDescription img {
+    width: 90%;
+  }
+  .composeImgWithDescription h3,
+  h5 {
+    text-align: center;
+  }
+
+  .composeImgWithDescription .texthp,
+  p {
+    padding-left: 15px;
+    width: 93%;
+    padding-right: 0px;
+  }
+  .composeImgWithDescription .texthp hr {
+    margin: 5%;
+    width: 90%;
+  }
+  .memberStyle {
+    padding: 0px;
+  }
+
+  .memberStyle .composeImgWithDescription .texthp {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 0;
+  }
+
+  .memberStyle .composeImgWithDescription {
+    width: 100%;
+  }
+  .memberStyle .composeImgWithDescription .photo {
+    width: 90%;
+  }
+  p {
+    font-size: 1.3em;
+  }
+}

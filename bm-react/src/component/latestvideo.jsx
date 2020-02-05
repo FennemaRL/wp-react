@@ -52,7 +52,7 @@ class LatestVideo extends Component {
       let bmuid = process.env.REACT_APP_bmuid;
       axios
         .get(
-          `https://www.googleapis.com/youtube/v3/search?key=${kg}&channelId=${bmuid}&part=snippet,id&order=date&maxResultgs=1&showinfo=0&enablejsapi=1`
+          `https://www.googleapis.com/youtube/v3/search?key=${kg}&channelId=${bmuid}&part=snippet,id&order=date&maxResults=1&showinfo=0&enablejsapi=1`
         )
         .then(res => {
           this.setState({ videos: res.data.items });
