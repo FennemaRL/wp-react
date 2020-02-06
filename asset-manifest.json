@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/wp-react/static/css/main.5f3784b7.chunk.css",
+    "main.js": "/wp-react/static/js/main.544a814b.chunk.js",
+    "main.js.map": "/wp-react/static/js/main.544a814b.chunk.js.map",
+    "runtime-main.js": "/wp-react/static/js/runtime-main.b8155993.js",
+    "runtime-main.js.map": "/wp-react/static/js/runtime-main.b8155993.js.map",
+    "static/js/2.1f204620.chunk.js": "/wp-react/static/js/2.1f204620.chunk.js",
+    "static/js/2.1f204620.chunk.js.map": "/wp-react/static/js/2.1f204620.chunk.js.map",
+    "index.html": "/wp-react/index.html",
+    "precache-manifest.25e33e19e3aab0dc1842dd9dcea801cc.js": "/wp-react/precache-manifest.25e33e19e3aab0dc1842dd9dcea801cc.js",
+    "service-worker.js": "/wp-react/service-worker.js",
+    "static/css/main.5f3784b7.chunk.css.map": "/wp-react/static/css/main.5f3784b7.chunk.css.map",
+    "static/js/2.1f204620.chunk.js.LICENSE": "/wp-react/static/js/2.1f204620.chunk.js.LICENSE",
+    "static/media/akane2.jpg": "/wp-react/static/media/akane2.679e547e.jpg",
+    "static/media/arrowdown.svg": "/wp-react/static/media/arrowdown.cea5e582.svg",
+    "static/media/home.css": "/wp-react/static/media/bgsecondsection.1f2f5e01.jpg",
+    "static/media/history-bm.jpg": "/wp-react/static/media/history-bm.84d8d7a0.jpg",
+    "static/media/icoakane.png": "/wp-react/static/media/icoakane.ca9490fa.png",
+    "static/media/icokanami.png": "/wp-react/static/media/icokanami.9f61364f.png",
+    "static/media/icokuruppo.png": "/wp-react/static/media/icokuruppo.2b1ab4a2.png",
+    "static/media/icomisa.png": "/wp-react/static/media/icomisa.0c0c4524.png",
+    "static/media/icosaiki.png": "/wp-react/static/media/icosaiki.e233d6c9.png",
+    "static/media/instagram.svg": "/wp-react/static/media/instagram.341a67c5.svg",
+    "static/media/kanami2.jpg": "/wp-react/static/media/kanami2.6733d967.jpg",
+    "static/media/miku2.jpg": "/wp-react/static/media/miku2.50da4c4b.jpg",
+    "static/media/misa2.jpg": "/wp-react/static/media/misa2.121ce0a5.jpg",
+    "static/media/onlyJapan.jpg": "/wp-react/static/media/onlyJapan.ee566b6c.jpg",
+    "static/media/saiki.jpg": "/wp-react/static/media/saiki.3c0a2e95.jpg",
+    "static/media/twitter.svg": "/wp-react/static/media/twitter.631cd566.svg",
+    "static/media/wordwide.jpg": "/wp-react/static/media/wordwide.d515b224.jpg",
+    "static/media/youtube.svg": "/wp-react/static/media/youtube.e778f247.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8155993.js",
+    "static/js/2.1f204620.chunk.js",
+    "static/css/main.5f3784b7.chunk.css",
+    "static/js/main.544a814b.chunk.js"
+  ]
+}
