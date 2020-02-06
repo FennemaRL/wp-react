@@ -35,17 +35,23 @@ div.dialogDisk.bg {
   width: 20px;
 }
 .imagenNsongs {
+  padding: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .imagenNsongs img {
   width: 60%;
-  height: 60%;
 }
 .song {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-around;
+}
+.space {
+  flex: 1;
+}
+.duration {
+  text-align: right;
 }
 
 @media screen and (max-width: 48em) {

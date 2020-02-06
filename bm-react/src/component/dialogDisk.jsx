@@ -52,7 +52,7 @@ const DialogDisk = props => {
   if (album && !tracks.length && albumlink === album.href) {
     console.log(tracks);
     return (
-      <>
+      <div>
         <div className={dialogshow + " bg"} onClick={props.close} />
         <div className={dialogshow}>
           <div className="trackRevw">
@@ -62,13 +62,14 @@ const DialogDisk = props => {
             <h1>{album.name}</h1>
             <div className="imagenNsongs">
               <img src={album.images[0].url} alt="" />
-              <div>
+              <div style={{ width: "100%" }}>
                 <h3>Tracks</h3>
                 <div className="songs">
-                  {tracks.items.map(song => (
+                  {tracks.items.map((song, index) => (
                     <div className="song" key={song.name}>
-                      <p>{song.name}</p>
-                      <p>
+                      <p>{index + 1 + `.` + song.name}</p>
+                      <div className="space" />
+                      <p className="duration">
                         {(song.duration_ms / 60000).toString().substr(0, 4)}{" "}
                         mins
                       </p>
@@ -79,7 +80,7 @@ const DialogDisk = props => {
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
   return null;
