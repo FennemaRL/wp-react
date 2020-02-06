@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "34c0cd7417feb57930b7b9fd58d8ae1b",
+    "revision": "8a1f6a256f92a29f73d28e61fe98529b",
     "url": "/wp-react/index.html"
   },
   {
-    "revision": "359a1afe859fa119c2fc",
+    "revision": "716b502d28b1efaf5aa7",
     "url": "/wp-react/static/css/main.5f3784b7.chunk.css"
   },
   {
-    "revision": "613175e5aee7d7ae9eaa",
-    "url": "/wp-react/static/js/2.1f204620.chunk.js"
+    "revision": "ada2fabc2e573423ed7a",
+    "url": "/wp-react/static/js/2.de9f9bcf.chunk.js"
   },
   {
     "revision": "f949a1127d8f2991af4a7d26322b4db5",
-    "url": "/wp-react/static/js/2.1f204620.chunk.js.LICENSE"
+    "url": "/wp-react/static/js/2.de9f9bcf.chunk.js.LICENSE"
   },
   {
-    "revision": "359a1afe859fa119c2fc",
-    "url": "/wp-react/static/js/main.544a814b.chunk.js"
+    "revision": "716b502d28b1efaf5aa7",
+    "url": "/wp-react/static/js/main.9ed998be.chunk.js"
   },
   {
-    "revision": "9c42700a118bf05718bd",
-    "url": "/wp-react/static/js/runtime-main.b8155993.js"
+    "revision": "9acc242c8e69fbf53069",
+    "url": "/wp-react/static/js/runtime-main.f6b9df1f.js"
   },
   {
     "revision": "679e547e9ce69dcfd1ac9f3e09a1351a",
