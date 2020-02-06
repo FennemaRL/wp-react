@@ -1,6 +1,6 @@
 {
-  "homepage": "https://fennemarl.github.io/wp-react/",
-  "name": "frontBandMaid",
+  "homepage": "https://github.com/FennemaRL/BandMaidFP",
+  "name": "BandMaidFP",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
