@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import tokenSpotify from "./auth";
+import DialogDisk from "./dialogDisk";
 import "./discography.css";
 class Discography extends Component {
   state = {
@@ -8,7 +9,8 @@ class Discography extends Component {
       { type: "all", active: true },
       { type: "album", active: false },
       { type: "single", active: false }
-    ]
+    ],
+    albumr: ""
   };
 
   async getAlbums(artists, firstTry = true) {
@@ -95,6 +97,11 @@ class Discography extends Component {
     return (
       <div className="container">
         <h1>Discography</h1>
+        <DialogDisk
+          album={this.state.albumr}
+          display={!(this.state.albumr === "")}
+          close={() => this.setState({ albumr: "" })}
+        />
         <div className="filters">
           {this.state.filters.map(filter => {
             return (
@@ -117,11 +124,24 @@ class Discography extends Component {
             return (
               <div
                 key={album.name}
-                className={"album " + `${album.classStyle}`}
+                className={"album ".concat(`${album.classStyle}`)}
               >
-                <img src={album.images[0].url} alt="album cover" />
-                <p>{album.name}</p>
-                <p className="color">{album.release_date}</p>
+                <img
+                  src={album.images[0].url}
+                  alt="album cover"
+                  onClick={() => {
+                    this.setState({ albumr: album });
+                  }}
+                />
+                <p onClick={() => this.setState({ albumr: album })}>
+                  {album.name}
+                </p>
+                <p
+                  className="color"
+                  onClick={() => this.setState({ albumr: album })}
+                >
+                  {album.release_date}
+                </p>
               </div>
             );
           })}

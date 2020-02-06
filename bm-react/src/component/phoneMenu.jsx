@@ -6,12 +6,10 @@ const navlinkStile = {
 };
 const PhoneMenu = props => {
   let style = props.display ? "menuPhone" : "menuPhone hidden";
-  let pmr = React.createRef();
   let shadow = props.display ? "shadowMenuPhone" : "shadowMenuPhone hidden";
-  console.log(pmr);
   return (
     <>
-      <div className={style} ref={pmr}>
+      <div className={style}>
         <div />
 
         <NavLink
