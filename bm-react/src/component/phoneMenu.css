@@ -2,8 +2,8 @@
   .menuPhone {
     background-color: #4e1c30;
     position: fixed;
-    top: 3;
-    left: 0;
+
+    top: 8.6%;
     z-index: 4;
     min-height: 100vh;
     min-width: 65%;
@@ -30,7 +30,7 @@
   }
   .shadowMenuPhone {
     position: fixed;
-    top: 3;
+    top: 8.6%;
     background-color: rgba(0, 0, 0, 0.5);
     min-width: 35%;
     min-height: 100vh;
