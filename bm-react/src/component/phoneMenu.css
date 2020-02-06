@@ -3,8 +3,9 @@
     background-color: #4e1c30;
     position: fixed;
 
-    top: 8.6%;
-    z-index: 4;
+    top: 6.8%;
+    left: -65%;
+    z-index: 3;
     min-height: 100vh;
     min-width: 65%;
 
@@ -12,7 +13,7 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    transform: translateX(0);
+    transform: translateX(80%);
     transition: transform 2s ease;
   }
   .menuPhone a {
@@ -25,18 +26,20 @@
     flex: 0.75;
   }
   .menuPhone.hidden {
-    transform: translateX(-100%);
+    transform: translateX(-80%);
     transition: transform 2s ease;
   }
   .shadowMenuPhone {
     position: fixed;
-    top: 8.6%;
-    background-color: rgba(0, 0, 0, 0.5);
-    min-width: 35%;
-    min-height: 100vh;
-    z-index: 3;
+    top: 6.8%;
 
-    transform: translateX(185%);
+    left: -70%;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 60%;
+    min-height: 100vh;
+    z-index: 2;
+
+    transform: translateX(190%);
     transition: transform 2s ease;
   }
   .shadowMenuPhone.hidden {
