@@ -6,14 +6,19 @@ import { NavLink } from "react-router-dom";
 const navlinkStile = {
   textDecorationLine: "underline"
 };
-
 const Nav = props => {
+  let buttonEffect = props.buttonTransform ? "line rotate" : "line";
   return (
     <header>
       <NavLink to="/" className="logoWrap">
         <img src={navLogo} className="logoWidth" alt="band-Maid logo" />
       </NavLink>
       <div className="space"></div>
+      <button className="buttonToggle" onClick={props.fclose}>
+        <div className={buttonEffect} />
+        <div className={buttonEffect} />
+        <div className={buttonEffect} />
+      </button>
       <nav>
         <ul>
           <li>
@@ -33,11 +38,6 @@ const Nav = props => {
           </li>
         </ul>
       </nav>
-      <button className="buttonToggle" onClick={props.togglelateralM}>
-        <div className="line" />
-        <div className="line" />
-        <div className="line" />
-      </button>
     </header>
   );
 };

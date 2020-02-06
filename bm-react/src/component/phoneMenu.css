@@ -1,0 +1,46 @@
+@media screen and (max-width: 48em) {
+  .menuPhone {
+    background-color: #4e1c30;
+    position: fixed;
+    top: 3;
+    left: 0;
+    z-index: 4;
+    min-height: 100vh;
+    min-width: 65%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    transform: translateX(0);
+    transition: transform 2s ease;
+  }
+  .menuPhone a {
+    flex: 0.25;
+  }
+  .menuPhone div:first-child {
+    flex: 0.55;
+  }
+  .menuPhone div:last-child {
+    flex: 0.75;
+  }
+  .menuPhone.hidden {
+    transform: translateX(-100%);
+    transition: transform 2s ease;
+  }
+  .shadowMenuPhone {
+    position: fixed;
+    top: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 35%;
+    min-height: 100vh;
+    z-index: 3;
+
+    transform: translateX(185%);
+    transition: transform 2s ease;
+  }
+  .shadowMenuPhone.hidden {
+    transform: translateX(-100%);
+    transition: transform 2s ease;
+  }
+}

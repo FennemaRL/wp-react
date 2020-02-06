@@ -82,19 +82,11 @@ class Discography extends Component {
       functfilter(album.album_type)
         ? {
             ...album,
-            filterStyle: {
-              display: "block",
-              opacity: "1",
-              transition: "visibility 0s, opacity 0.5s linear"
-            }
+            classStyle: ""
           }
         : {
             ...album,
-            filterStyle: {
-              visibility: "hidden",
-              opacity: "0",
-              display: "none"
-            }
+            classStyle: " hidden"
           }
     );
     this.setState({ filters: filtersmod, albums: albumsfilters });
@@ -107,7 +99,7 @@ class Discography extends Component {
           {this.state.filters.map(filter => {
             return (
               <a
-                href={`filter albums by ${filter.type}`}
+                href={`filter albums by  ${filter.type}`}
                 key={filter.type}
                 style={filter.active ? { color: "#fff301" } : {}}
                 onClick={e => {
@@ -123,7 +115,10 @@ class Discography extends Component {
         <div className="principal albums">
           {this.state.albums.map(album => {
             return (
-              <div key={album.name} className="album" style={album.filterStyle}>
+              <div
+                key={album.name}
+                className={"album " + `${album.classStyle}`}
+              >
                 <img src={album.images[0].url} alt="album cover" />
                 <p>{album.name}</p>
                 <p className="color">{album.release_date}</p>
