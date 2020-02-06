@@ -45,5 +45,26 @@ div.dialogDisk.bg {
 }
 .song {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 48em) {
+  div.dialogDisk {
+    min-height: 90%;
+  }
+  .trackRevw {
+    width: 90%;
+  }
+  .trackRevw p {
+    font-size: 0.9em;
+  }
+  .imagenNsongs {
+    flex-wrap: wrap;
+  }
+  .imagenNsongs img {
+    width: 80%;
+  }
+  .song {
+    text-align: left;
+  }
 }

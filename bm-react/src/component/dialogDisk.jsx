@@ -64,14 +64,17 @@ const DialogDisk = props => {
               <img src={album.images[0].url} alt="" />
               <div>
                 <h3>Tracks</h3>
-                {tracks.items.map(song => (
-                  <div className="song" key={song.name}>
-                    <p>{song.name}</p>
-                    <p>
-                      {(song.duration_ms / 60000).toString().substr(0, 4)} mins
-                    </p>
-                  </div>
-                ))}
+                <div className="songs">
+                  {tracks.items.map(song => (
+                    <div className="song" key={song.name}>
+                      <p>{song.name}</p>
+                      <p>
+                        {(song.duration_ms / 60000).toString().substr(0, 4)}{" "}
+                        mins
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
