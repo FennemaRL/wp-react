@@ -20,11 +20,11 @@ function App() {
         <Nav fclose={() => changeValue(!state)} buttonTransform={state} />
         <PhoneMenu display={state} fclose={() => changeValue(!state)} />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/Biography" component={Biography} />
-          <Route exact path="/Music" component={Music} />
-          <Route exact path="/Discography" component={Discography} />
-          <Redirect to="/" />
+          <Route exact path="/BandMaidFP/" component={Home} />
+          <Route exact path="/BandMaidFP/Biography" component={Biography} />
+          <Route exact path="/BandMaidFP/Music" component={Music} />
+          <Route exact path="/BandMaidFP/Discography" component={Discography} />
+          <Redirect to="/BandMaidFP/" />
         </Switch>
         <Footer />
       </div>

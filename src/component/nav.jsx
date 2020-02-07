@@ -22,17 +22,17 @@ const Nav = props => {
       <nav>
         <ul>
           <li>
-            <NavLink activeStyle={navlinkStile} to="/Biography">
+            <NavLink activeStyle={navlinkStile} to="/BandMaidFP/Biography">
               Biography
             </NavLink>
           </li>
           <li>
-            <NavLink activeStyle={navlinkStile} to="/music">
+            <NavLink activeStyle={navlinkStile} to="/BandMaidFP/music">
               Listen Us
             </NavLink>
           </li>
           <li>
-            <NavLink activeStyle={navlinkStile} to="/Discography">
+            <NavLink activeStyle={navlinkStile} to="/BandMaidFP/Discography">
               Discography
             </NavLink>
           </li>

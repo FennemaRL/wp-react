@@ -14,17 +14,21 @@ const PhoneMenu = props => {
 
         <NavLink
           activeStyle={navlinkStile}
-          to="/Biography"
+          to="/BandMaidFP/Biography"
           onClick={props.fclose}
         >
           Biography
         </NavLink>
-        <NavLink activeStyle={navlinkStile} to="/music" onClick={props.fclose}>
+        <NavLink
+          activeStyle={navlinkStile}
+          to="/BandMaidFP/music"
+          onClick={props.fclose}
+        >
           Listen Us
         </NavLink>
         <NavLink
           activeStyle={navlinkStile}
-          to="/Discography"
+          to="/BandMaidFP/Discography"
           onClick={props.fclose}
         >
           Discography
