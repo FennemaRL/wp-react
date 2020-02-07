@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4af3c8bba64211863ec73ed8146b20e9",
+    "revision": "ddc8b6a2c7898bd4072fd06a31c96164",
     "url": "/BandMaidFP/index.html"
   },
   {
-    "revision": "1a0694d71f8008813ce8",
-    "url": "/BandMaidFP/static/css/main.9744f75f.chunk.css"
+    "revision": "233be7be9ebf561ca37d",
+    "url": "/BandMaidFP/static/css/main.6132d71c.chunk.css"
   },
   {
     "revision": "921a74697a7dcd3ca2c7",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BandMaidFP/static/js/2.89f8b752.chunk.js.LICENSE"
   },
   {
-    "revision": "1a0694d71f8008813ce8",
+    "revision": "233be7be9ebf561ca37d",
     "url": "/BandMaidFP/static/js/main.caac1f55.chunk.js"
   },
   {
