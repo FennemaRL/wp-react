@@ -76,7 +76,7 @@ a:hover {
 }
 .buttonToggle {
   height: 20px;
-  width: 20px;
+  width: 25px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -92,27 +92,26 @@ a:hover {
 }
 .buttonToggle .line {
   background-color: white;
-  width: 20px;
+  width: 25px;
   height: 2px;
   transform: rotate(0deg);
-  transition: transform 1s ease;
+  transition: transform 0.7s ease;
 }
 .buttonToggle .line:nth-child(2) {
   opacity: 1;
   transition: opacity 1.5s ease;
 }
 .line.rotate:first-child {
-  transform: rotate(45deg) translateY(6px) translateX(2px);
-  transition: transform 1s ease;
+  transform: rotate(45deg) translateY(4px) translateX(4px);
+  transition: transform 0.7s ease;
 }
 .line.rotate:nth-child(2) {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 .line.rotate:last-child {
-  top: 5px;
-  transform: rotate(-45deg) translateY(-6px) translateX(2px);
-  transition: transform 1s ease;
+  transform: rotate(-45deg) translateY(-4px) translateX(4px);
+  transition: transform 0.7s ease;
 }
 @media screen and (max-width: 48em) {
   header {

@@ -111,6 +111,7 @@ footer {
   min-height: 5vh;
   color: aliceblue;
   font-size: 1.2em;
+  padding-bottom: 15px;
 }
 footer p {
   text-align: center;

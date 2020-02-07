@@ -6,8 +6,9 @@ class LatestVideo extends Component {
   state = {
     videos: [],
     videoSize: {
-      height: "430px",
-      width: "60%",
+      height:
+        window.innerWidth <= 768 ? (window.innerHeight / 3).toString : "430px",
+      width: window.innerWidth <= 768 ? "100" : "60%",
       playerVars: {
         autoplay: 0
       },
