@@ -1,3 +1,3 @@
 
-# wp-react
-a web page based in a band called band-maid
+  # Band maid FanPage
+  it's a web page created in react 
