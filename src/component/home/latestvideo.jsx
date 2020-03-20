@@ -17,37 +17,6 @@ class LatestVideo extends Component {
       min: window.innerWidth <= 768
     }
   };
-  handleResize = e => {
-    let widthtotal = window.innerWidth;
-    let heighttotal = window.innerHeight;
-    let actualStatusvideo = this.state.videoSize;
-    if (widthtotal <= 768 && !actualStatusvideo.min) {
-      this.setState(() => {
-        let newstate = {
-          height: heighttotal / 3 + "px",
-          width: "100%",
-          playerVars: actualStatusvideo.playerVars,
-          min: !actualStatusvideo.min
-        };
-        return { videoSize: newstate };
-      });
-    }
-    if (widthtotal > 768 && actualStatusvideo.min) {
-      this.setState(() => {
-        let newstate = {
-          height: "430px",
-          width: "60%",
-          playerVars: actualStatusvideo.playerVars,
-          min: !actualStatusvideo.min
-        };
-        return { videoSize: newstate };
-      });
-    }
-  };
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.handleResize);
-  }
 
   componentDidMount() {
     if (!this.state.videos.size) {
@@ -62,7 +31,6 @@ class LatestVideo extends Component {
         })
         .catch(e => console.error(e));
     }
-    window.addEventListener("resize", this.handleResize);
   }
 
   render() {
