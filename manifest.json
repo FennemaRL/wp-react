@@ -1,11 +1,13 @@
 {
   "short_name": "BM|project",
   "name": "Band Maid Fan page project",
-  "icons": {
-    "src": "ico-bm.png",
-    "sizes": "64x64 32x32 24x24 16x16",
-    "type": "png"
-  },
+  "icons": [
+    {
+      "src": "ico-bm.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "png"
+    }
+  ],
 
   "start_url": ".",
   "display": "standalone",
