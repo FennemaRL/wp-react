@@ -77,11 +77,6 @@ const DialogDisk = props => {
                           .toString()
                           .substr(0, 4)
                           .replace(".", " : ")
-                      )}
-                      {console.log(
-                        song.name,
-                        song.duration_ms,
-                        song.duration_ms / 60000
                       )}{" "}
                     </p>
                   </div>

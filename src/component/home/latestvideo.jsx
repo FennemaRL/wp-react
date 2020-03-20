@@ -29,7 +29,7 @@ class LatestVideo extends Component {
         .then(res => {
           this.setState({ videos: res.data.items });
         })
-        .catch(e => console.error(e));
+        .catch(e => () => {});
     }
   }
 

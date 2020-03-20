@@ -31,12 +31,10 @@ h5 {
   margin-left: 27%;
   width: 45%;
 }
-
-.principal .composeImgWithDescription {
-  padding-bottom: 2vh;
-}
-.composeImgWithDescription:first-child {
+.principal .composeImgWithDescription:first-child {
   background-color: black;
+  height: 90%;
+  padding: 5px;
 }
 .composeImgWithDescription {
   display: flex;
@@ -105,7 +103,7 @@ h5 {
 
   .composeImgWithDescription {
     padding: 0;
-    display: inline;
+    display: block;
   }
   .composeImgWithDescription img {
     width: 90%;
@@ -127,6 +125,7 @@ h5 {
   }
   .memberStyle {
     padding: 0px;
+    margin: 10px 0;
   }
 
   .memberStyle .composeImgWithDescription .texthp {

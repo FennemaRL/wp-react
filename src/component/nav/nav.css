@@ -115,21 +115,20 @@ a:hover {
   transition: transform 0.7s ease;
 }
 @media screen and (max-width: 48em) {
-  header {
-    justify-content: space-evenly;
-  }
-  header .logoWrap {
-    flex: 2;
-    display: flex;
-    justify-content: flex-end;
-  }
   .logoWidth {
     padding: 0;
   }
   .buttonWrap {
+    top: 1.5vh;
+    right: 1.5vh;
+    position: absolute;
     display: block;
-    flex: 0.4;
-    padding-left: 8vw;
+  }
+  .logoWrap {
+    margin-top: 0.2vh;
+  }
+  header {
+    justify-content: space-evenly;
   }
   header nav {
     display: none;

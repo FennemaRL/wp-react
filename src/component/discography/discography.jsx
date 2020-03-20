@@ -50,17 +50,13 @@ class Discography extends Component {
         });
       })
       .catch(error => {
-        console.log("error");
-        console.log(error);
         if (
           error.status === 401 &&
           error.message === "The access token expired"
         ) {
           localStorage.removeItem("tokenBM");
-          firstTry
-            ? this.getAlbums(artists, false)
-            : /*for refresh the token only 1 time */
-              console.log("no se refresca mas :(");
+          if (firstTry) this.getAlbums(artists, false);
+          /*for refresh the token only 1 time */
         }
       });
   }

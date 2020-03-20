@@ -21,8 +21,8 @@
     transition: transform 2s ease;
   }
   .menuPhone a {
-    height: 10vh;
-    margin: 2vh 0;
+    height: 20px;
+    margin: 4vh 0;
   }
   .shadowMenuPhone {
     position: fixed;
