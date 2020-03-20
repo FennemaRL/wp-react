@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import tokenSpotify from "./auth";
+import tokenSpotify from "../auth";
 import DialogDisk from "./dialogDisk";
 import "./discography.css";
 class Discography extends Component {

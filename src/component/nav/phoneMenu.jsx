@@ -10,8 +10,13 @@ const PhoneMenu = props => {
   return (
     <>
       <div className={style}>
-        <div />
-
+        <NavLink
+          activeStyle={navlinkStile}
+          to="/BandMaidFP/"
+          onClick={props.fclose}
+        >
+          Home
+        </NavLink>
         <NavLink
           activeStyle={navlinkStile}
           to="/BandMaidFP/Biography"
@@ -33,8 +38,6 @@ const PhoneMenu = props => {
         >
           Discography
         </NavLink>
-
-        <div />
       </div>
       <div className={shadow}></div>
     </>

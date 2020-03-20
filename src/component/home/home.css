@@ -21,11 +21,10 @@
 .socialMedia a:hover img {
   opacity: 0.7;
 }
-.socialMediaLinks {
+.flexCenter {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  min-height: 40px;
 }
 
 div.socialMedia {
@@ -108,22 +107,23 @@ div.socialMedia {
 }
 footer {
   background-color: #1c1d18;
-  min-height: 5vh;
+  min-height: 8vh;
   color: aliceblue;
-  font-size: 1.2em;
-  padding-bottom: 15px;
 }
 footer p {
-  text-align: center;
-  margin: 0;
+  font-size: 0.8em;
 }
 footer h3 {
   color: #a3c9c9;
 }
 
+footer .flexCenter {
+  min-width: 270px;
+}
+
 @media screen and (max-width: 48em) {
   .bgPrincipal {
-    margin-top: 69px;
+    margin-top: 8vh;
     min-height: 26vh;
   }
   .secondSection {
@@ -136,17 +136,7 @@ footer h3 {
   .dropdown {
     display: none;
   }
-  .footer p {
-    padding: 0;
-    text-align: center;
-    font-size: 1em;
-  }
   .merch div {
     flex-wrap: wrap;
-  }
-}
-@media screen and (min-width: 48em) {
-  .socialMediaLinks .space {
-    flex: 0.4;
   }
 }

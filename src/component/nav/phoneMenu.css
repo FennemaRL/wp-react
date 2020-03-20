@@ -3,40 +3,35 @@
     background-color: #4e1c30;
     position: fixed;
 
-    top: 6.8%;
+    top: 7.5vh;
     left: -65%;
     z-index: 3;
-    min-height: 100vh;
+    min-height: 92.5vh;
     min-width: 65%;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
     transform: translateX(80%);
     transition: transform 2s ease;
-  }
-  .menuPhone a {
-    flex: 0.25;
-  }
-  .menuPhone div:first-child {
-    flex: 0.55;
-  }
-  .menuPhone div:last-child {
-    flex: 0.75;
   }
   .menuPhone.hidden {
     transform: translateX(-80%);
     transition: transform 2s ease;
   }
+  .menuPhone a {
+    height: 10vh;
+    margin: 2vh 0;
+  }
   .shadowMenuPhone {
     position: fixed;
-    top: 6.8%;
+    top: 7.5vh;
 
     left: -70%;
     background-color: rgba(0, 0, 0, 0.5);
     min-width: 60%;
-    min-height: 100vh;
+    min-height: 92.5vh;
     z-index: 2;
 
     transform: translateX(190%);

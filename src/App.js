@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Home from "./component/home";
-import Nav from "./component/nav";
-import Footer from "./component/footer";
-import Biography from "./component/biography";
-import Music from "./component/music";
-import Discography from "./component/discography";
-import PhoneMenu from "./component/phoneMenu";
+import Home from "./component/home/home";
+import Nav from "./component/nav/nav";
+import Footer from "./component/footer/footer";
+import Biography from "./component/biography/biography";
+import Music from "./component/music/music";
+import Discography from "./component/discography/discography";
+import PhoneMenu from "./component/nav/phoneMenu";
 import {
   BrowserRouter as Router,
   Switch,

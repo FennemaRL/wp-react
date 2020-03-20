@@ -1,0 +1,97 @@
+div.dialogDisk {
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialogDisk.hidden {
+  display: none;
+}
+
+.diskRevw {
+  position: relative;
+  height: 73vh;
+  width: 80%;
+  background-color: #1c1d18;
+}
+.closebutton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border-color: transparent;
+  color: antiquewhite;
+  width: 30px;
+  height: 30px;
+
+  transition: color 1s ease-in-out;
+}
+.closebutton:hover {
+  cursor: pointer;
+  color: rgb(236, 99, 74);
+}
+.imagenNsongs {
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.imagenNsongs img {
+  width: 40%;
+}
+.songs {
+  height: 5%;
+  height: 85%;
+  min-width: 280px;
+  overflow: auto;
+}
+.song {
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+.song p {
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 48em) {
+  div.dialogDisk {
+    min-height: 100%;
+  }
+  .diskRevw {
+    width: 100%;
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+  }
+  .diskRevw p {
+    font-size: 0.8em;
+  }
+  .imagenNsongs {
+    flex-direction: column;
+    height: 90%;
+    width: 95%;
+  }
+  .content {
+    height: 50%;
+  }
+  .imagenNsongs img {
+    width: 65%;
+    margin: 0 auto;
+    display: block;
+  }
+  .imagenNsongs h3 {
+    margin-top: 0.1vh;
+  }
+  .song {
+    padding: 0;
+    text-align: l;
+  }
+}

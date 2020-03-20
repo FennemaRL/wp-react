@@ -3,14 +3,12 @@ import MediaButtons from "./mediabuttons";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="socialMediaLinks">
-        <div className="space" />
+    <footer className="flexCenter">
+      <p>© {new Date().getFullYear()} Band-Maid. All Rights Reserved. </p>
+      <div className="flexCenter">
         <h3>Follow us on : </h3>
         <MediaButtons />
-        <div className="space" />
       </div>
-      <p>© {new Date().getFullYear()} BM. All Rights Reserved. </p>
     </footer>
   );
 };

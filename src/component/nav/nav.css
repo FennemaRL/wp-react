@@ -1,9 +1,11 @@
 .logoWidth {
-  padding-top: 4px;
   width: 225px;
-  height: 40px;
   opacity: 1;
   transition: 0.5s;
+  padding: 0.5vw 0 0 2vw;
+}
+.logoWrap {
+  width: auto;
 }
 figure:hover .logoWidth {
   cursor: pointer;
@@ -15,16 +17,15 @@ header {
   top: 0;
   position: fixed;
   width: 100%;
+  height: 8vh;
   z-index: 4;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: linear-gradient(-170deg, black, #201f58, #752644, black);
   background-size: 300% 300%;
   animation: gradient 20s ease infinite;
-
-  padding-top: 14px;
-  padding-left: 30px;
-  padding-bottom: 12px;
 }
 
 @keyframes gradient {
@@ -47,22 +48,19 @@ header {
     background-position: 0% 50%;
   }
 }
-/* flex full screen*/
-header .space {
-  flex: 1;
-}
 header nav {
   align-items: center;
-  padding-right: 50px;
   color: white;
+  padding-right: 2vw;
 }
 header nav ul {
+  padding: 0;
   list-style: none;
   display: flex;
   justify-content: space-around;
 }
 header nav ul li {
-  padding: 0 1rem;
+  padding: 0 1vh;
 }
 a {
   color: aliceblue;
@@ -84,8 +82,9 @@ a:hover {
   flex-direction: column;
   justify-content: space-around;
   box-sizing: border-box;
-
-  margin: 8px 1rem;
+}
+.buttonWrap {
+  display: none;
 }
 .buttonToggle:focus {
   outline: none;
@@ -117,31 +116,22 @@ a:hover {
 }
 @media screen and (max-width: 48em) {
   header {
-    height: 44px;
-    transition: height 1s ease;
+    justify-content: space-evenly;
   }
   header .logoWrap {
-    flex: 1;
+    flex: 2;
     display: flex;
-    justify-content: center;
-    padding-right: 0px;
+    justify-content: flex-end;
   }
-  header .buttonToggle {
-    flex: 0.2;
+  .logoWidth {
+    padding: 0;
   }
-  .space {
-    display: none;
+  .buttonWrap {
+    display: block;
+    flex: 0.4;
+    padding-left: 8vw;
   }
   header nav {
-    display: none;
-  }
-}
-@media screen and (min-width: 48em) {
-  header nav {
-    top: 0;
-    display: flex;
-  }
-  .buttonToggle {
     display: none;
   }
 }

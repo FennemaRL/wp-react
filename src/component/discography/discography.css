@@ -4,13 +4,13 @@
   justify-content: center;
   flex-direction: row;
   width: 50vw;
-  margin-left: 25vw;
 }
 .album {
   flex: 0 0 17%;
   margin: 5px;
   text-align: left;
   opacity: 1;
+  text-transform: capitalize;
 }
 .album.hidden {
   display: none;
@@ -39,7 +39,6 @@
 }
 .filters {
   width: 20%;
-  margin-left: 40%;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -48,7 +47,6 @@
 
 @media screen and (max-width: 48em) {
   .filters {
-    margin-left: 30%;
     width: 40%;
   }
   .albums {

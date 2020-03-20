@@ -7,17 +7,17 @@ h5 {
   font-weight: 300;
 }
 
-div .container {
+.container {
   /*this styles are shared between biography discography and music even if not all import this file*/
-  font-family: Audiowide, cursive;
+  font-family: "Roboto", cursive;
   background-color: black;
   color: white;
   padding: 14vh 0 2vh 0;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
   min-height: 78.9vh;
-}
-p {
-  font-family: "Roboto Condensed", sans-serif;
 }
 .bio h1 {
   font-size: 2em;
@@ -25,7 +25,6 @@ p {
 .principal {
   /*the same as above*/
   background-color: #1c1d18;
-  margin-left: 10%;
   width: 80%;
 }
 .disco {
@@ -33,6 +32,9 @@ p {
   width: 45%;
 }
 
+.principal .composeImgWithDescription {
+  padding-bottom: 2vh;
+}
 .composeImgWithDescription:first-child {
   background-color: black;
 }
@@ -58,8 +60,8 @@ p {
 
 .composeImgWithDescription .texthp p {
   text-indent: 4%;
-  line-height: 200%;
-  font-size: 0.9em;
+  line-height: 130%;
+  font-size: 0.8em;
 }
 .memberStyle {
   padding: 15px;
@@ -99,7 +101,6 @@ p {
   }
   .principal {
     width: 90%;
-    margin: 0 5%;
   }
 
   .composeImgWithDescription {

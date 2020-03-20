@@ -13,12 +13,13 @@ const Nav = props => {
       <NavLink to="/" className="logoWrap">
         <img src={navLogo} className="logoWidth" alt="band-Maid logo" />
       </NavLink>
-      <div className="space"></div>
-      <button className="buttonToggle" onClick={props.fclose}>
-        <div className={buttonEffect} />
-        <div className={buttonEffect} />
-        <div className={buttonEffect} />
-      </button>
+      <div className="buttonWrap">
+        <button className="buttonToggle" onClick={props.fclose}>
+          <div className={buttonEffect} />
+          <div className={buttonEffect} />
+          <div className={buttonEffect} />
+        </button>
+      </div>
       <nav>
         <ul>
           <li>
