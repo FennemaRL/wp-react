@@ -6,8 +6,8 @@
     top: 7.5vh;
     left: -65%;
     z-index: 3;
-    min-height: 92.5vh;
-    min-width: 65%;
+    min-height: 100vh;
+    min-width: 70%;
 
     display: flex;
     flex-direction: column;
@@ -21,8 +21,8 @@
     transition: transform 2s ease;
   }
   .menuPhone a {
-    height: 20px;
-    margin: 4vh 0;
+    height: 40px;
+    margin: 3vh 0;
   }
   .shadowMenuPhone {
     position: fixed;
@@ -31,7 +31,7 @@
     left: -70%;
     background-color: rgba(0, 0, 0, 0.5);
     min-width: 60%;
-    min-height: 92.5vh;
+    min-height: 100vh;
     z-index: 2;
 
     transform: translateX(190%);

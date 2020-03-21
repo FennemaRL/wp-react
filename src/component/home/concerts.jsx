@@ -28,9 +28,7 @@ const Components = () => {
               return (
                 <React.Fragment key={concert.date}>
                   <tr>
-                    <td className="dated">
-                      {new Date(concert.date).toDateString()}
-                    </td>
+                    <td>{new Date(concert.date).toDateString()}</td>
                     <td>{concert.place}</td>
                     <td>{concert.eventName}</td>
                   </tr>

@@ -12,6 +12,7 @@ const PhoneMenu = props => {
       <div className={style}>
         <NavLink
           activeStyle={navlinkStile}
+          exact
           to="/BandMaidFP/"
           onClick={props.fclose}
         >
