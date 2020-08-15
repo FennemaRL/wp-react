@@ -4,8 +4,13 @@ object-assign
 @license MIT
 */
 
-/** @license React v16.12.0
- * react.production.min.js
+/**
+* @link https://github.com/gajus/sister for the canonical source repository
+* @license https://github.com/gajus/sister/blob/master/LICENSE BSD 3-Clause
+*/
+
+/** @license React v0.18.0
+ * scheduler.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -22,8 +27,8 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v0.18.0
- * scheduler.production.min.js
+/** @license React v16.12.0
+ * react-is.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -31,13 +36,8 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/**
-* @link https://github.com/gajus/sister for the canonical source repository
-* @license https://github.com/gajus/sister/blob/master/LICENSE BSD 3-Clause
-*/
-
 /** @license React v16.12.0
- * react-is.production.min.js
+ * react.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
