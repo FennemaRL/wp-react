@@ -19,6 +19,9 @@ h5 {
   align-items: center;
   min-height: 78.9vh;
 }
+.container h1 {
+  padding-bottom: 2vh;
+}
 .bio h1 {
   font-size: 2em;
 }
@@ -104,18 +107,18 @@ h5 {
     display: block;
   }
   .composeImgWithDescription img {
-    width: 90%;
+    width: 100%;
   }
   .composeImgWithDescription h3,
   h5 {
     text-align: center;
   }
-
-  .composeImgWithDescription .texthp,
-  p {
-    padding-left: 15px;
-    width: 93%;
-    padding-right: 0px;
+  .composeImgWithDescription .texthp {
+    padding: 0;
+    padding-bottom: 10px;
+  }
+  .composeImgWithDescription .texthp p{
+    line-height: 1.8;
   }
   .composeImgWithDescription .texthp hr {
     margin: 5%;
@@ -136,9 +139,17 @@ h5 {
     width: 100%;
   }
   .memberStyle .composeImgWithDescription .photo {
-    width: 90%;
+    width: 100%;
   }
   p {
     font-size: 1.3em;
   }
+  .memberStyle .title {
+    width: 100%;
+    margin-left: 0;
+  }
+  .principal {
+    width: 98%;
+  }
+
 }
