@@ -34,7 +34,7 @@ function getTracks(linkAlbum, setTracks, setAlbumLink, firstTry = false) {
     });
 }
 
-const DialogDisk = ({album,close, display,}) => {
+const DialogDisk = ({album,close, display}) => {
   const [tracks, setTracks] = useState({});
   const [albumlink, setAlbumLink] = useState("");
 
@@ -54,8 +54,9 @@ const DialogDisk = ({album,close, display,}) => {
 
   if (album && !tracks.length && (!albumlink || albumlink !== album.href))
     getTracks(album.href, setTracks, setAlbumLink);
-  if (album && !tracks.length && albumlink === album.href) {
+
     return (
+      (album && !tracks.length && albumlink === album.href) &&
       <div className={display ? "dialogDisk" : "dialogDisk hidden"}>
         <div ref={diskWrapper} className="diskRevw">
           <button className="closebutton" onClick={close}>
@@ -68,25 +69,28 @@ const DialogDisk = ({album,close, display,}) => {
               <h3>Tracks</h3>
               <div className="songs">
                 {tracks.items.map((song, index) => (
-                  <div className="song" key={song.name}>
-                    <p>{index + 1 + "." + song.name}</p>
-                    <p>
-                      {(s => s + "0".repeat(6 - s.length))(
-                        (song.duration_ms / 60000)
-                          .toString()
-                          .substr(0, 4)
-                          .replace(".", " : ")
-                      )}{" "}
-                    </p>
-                  </div>
+                  <Song song={song} key={index} index={index}/>
                 ))}
               </div>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-  return null;
+    )
 };
+
+const Song = ({song, index}) =>{
+  return (
+    <div className="song" key={song.name}>
+      <p>{index + 1 + "." + song.name}</p>
+      <p>{parseDuration(song)}</p>
+    </div>
+  )
+}
+const parseDuration=(song)=> (s => s + "0".repeat(6 - s.length))(
+  (song.duration_ms / 60000)
+    .toString()
+    .substr(0, 4)
+    .replace(".", " : ")
+)
 export default DialogDisk;

@@ -17,14 +17,13 @@ div.dialogDisk {
 
 .diskRevw {
   position: relative;
-  height: 73vh;
-  width: 80%;
+  height: 65vh;
   background-color: #1c1d18;
 }
 .closebutton {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 15px;
+  right: 15px;
   background-color: transparent;
   border-color: transparent;
   color: antiquewhite;
@@ -43,7 +42,7 @@ div.dialogDisk {
   justify-content: space-evenly;
 }
 .imagenNsongs img {
-  width: 40%;
+  width: 50%;
 }
 .songs {
   height: 5%;
@@ -63,13 +62,15 @@ div.dialogDisk {
 
 @media screen and (max-width: 48em) {
   div.dialogDisk {
-    min-height: 100%;
+    height: 100vh;
+    overflow: hidden;
   }
   .diskRevw {
     width: 100%;
     display: flex;
     height: 80vh;
     flex-direction: column;
+    padding-top: 30px;
   }
   .diskRevw p {
     font-size: 0.8em;
@@ -80,10 +81,10 @@ div.dialogDisk {
     width: 95%;
   }
   .content {
-    height: 50%;
+    height: 43%;
   }
   .imagenNsongs img {
-    width: 65%;
+    width: 100%;
     margin: 0 auto;
     display: block;
   }
@@ -92,6 +93,7 @@ div.dialogDisk {
   }
   .song {
     padding: 0;
+    padding-right: 15px;
     text-align: l;
   }
 }
