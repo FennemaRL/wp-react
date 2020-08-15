@@ -1,19 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 import oj from "../img/onlyJapan.jpg";
 import ww from "../img/wordwide.jpg";
-class merch extends Component {
-  state = {
-    stores: [
-      { img: oj, srcs: "https://bandmaidstore.myshopify.com/" },
-      { img: ww, srcs: "http://bandmaidshop.com/" }
-    ]
-  };
-  render() {
+
+let stores= [ { img: oj, srcs: "https://bandmaidstore.myshopify.com/" },
+{ img: ww, srcs: "http://bandmaidshop.com/" }]
+
+function Merch(){
     return (
       <div className="merch">
         <h1>Merch</h1>
         <div>
-          {this.state.stores.map(store => {
+          {stores.map(store => {
             return (
               <a href={store.srcs} key={store.srcs} className="merchImg">
                 <img
@@ -25,8 +22,7 @@ class merch extends Component {
           })}
         </div>
       </div>
-    );
-  }
+    )
 }
 
-export default merch;
+export default Merch;

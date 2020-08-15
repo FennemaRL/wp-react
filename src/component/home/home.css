@@ -145,10 +145,10 @@ footer .flexCenter {
   .merch div {
     flex-wrap: wrap;
   }
-  div.merch{
+  merch{
     margin-bottom: 20px;
   }
-  .merch div a {
+  .merch div a:first-child {
     margin-bottom: 20px;
   }
   footer {
