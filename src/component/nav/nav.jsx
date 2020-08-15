@@ -4,7 +4,7 @@ import "./nav.css";
 import { NavLink } from "react-router-dom";
 
 const navlinkStile = {
-  textDecorationLine: "underline"
+  fontWeight: "bold",
 };
 const Nav = props => {
   let buttonEffect = props.buttonTransform ? "line rotate" : "line";

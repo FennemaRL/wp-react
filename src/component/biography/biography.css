@@ -33,15 +33,14 @@ h5 {
 }
 .principal .composeImgWithDescription:first-child {
   background-color: black;
-  height: 90%;
-  padding: 5px;
+  padding-bottom: 5px;
 }
 .composeImgWithDescription {
   display: flex;
   justify-content: center;
 }
 .composeImgWithDescription img {
-  width: 30vw;
+  width: 90vw;
 }
 .composeImgWithDescription .texthp {
   width: 100%;
@@ -51,16 +50,16 @@ h5 {
   font-weight: 200;
 }
 
-.composeImgWithDescription .texthp hr {
-  margin-left: 0px;
-  width: 80%;
-}
-
 .composeImgWithDescription .texthp p {
   text-indent: 4%;
   line-height: 130%;
   font-size: 0.8em;
 }
+.composeImgWithDescription .texthp p a {
+  display: inline-block;
+  padding: 5px;
+}
+
 .memberStyle {
   padding: 15px;
 }
@@ -88,9 +87,8 @@ h5 {
 }
 .memberStyle .composeImgWithDescription .socialMediaIcon {
   width: 15px;
-  padding-left: 5px;
-  padding-right: 5px;
   filter: invert(1);
+  margin-bottom: -2px;
 }
 
 @media screen and (max-width: 48em) {
