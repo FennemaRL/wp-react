@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./dialogDisk.css";
 
-async function getTracks(linkAlbum, setTracks, setAlbumLink, firstTry = false) {
+function getTracks(linkAlbum, setTracks, setAlbumLink, firstTry = false) {
   let key = localStorage.getItem("tokenBM");
 
   let myHeaders = new Headers();
@@ -28,14 +28,13 @@ async function getTracks(linkAlbum, setTracks, setAlbumLink, firstTry = false) {
         error.message === "The access token expired"
       ) {
         localStorage.removeItem("tokenBM");
-        if (firstTry) this.getTracks(linkAlbum, setTracks, setAlbumLink, true);
+        if (firstTry) getTracks(linkAlbum, setTracks, setAlbumLink, true);
         /*for refresh the token only 1 time */
       }
     });
 }
 
-const DialogDisk = props => {
-  let album = props.album;
+const DialogDisk = ({album,close, display,}) => {
   const [tracks, setTracks] = useState({});
   const [albumlink, setAlbumLink] = useState("");
 
@@ -49,7 +48,7 @@ const DialogDisk = props => {
 
   const handleClickOutside = event => {
     if (diskWrapper.current && !diskWrapper.current.contains(event.target)) {
-      props.close();
+      close();
     }
   };
 
@@ -57,9 +56,9 @@ const DialogDisk = props => {
     getTracks(album.href, setTracks, setAlbumLink);
   if (album && !tracks.length && albumlink === album.href) {
     return (
-      <div className={props.display ? "dialogDisk" : "dialogDisk hidden"}>
+      <div className={display ? "dialogDisk" : "dialogDisk hidden"}>
         <div ref={diskWrapper} className="diskRevw">
-          <button className="closebutton" onClick={props.close}>
+          <button className="closebutton" onClick={close}>
             X
           </button>
           <h1>{album.name}</h1>
