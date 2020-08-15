@@ -1,44 +1,43 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import tokenSpotify from "../auth";
 import DialogDisk from "./dialogDisk";
 import "./discography.css";
-class Discography extends Component {
-  state = {
-    albums: [],
-    filters: [
-      { type: "all", active: true },
-      { type: "album", active: false },
-      { type: "single", active: false }
-    ],
-    albumr: ""
-  };
 
-  async getAlbums(artists, firstTry = true) {
-    let key =
-      localStorage.getItem("tokenBM") ||
-      (!(await tokenSpotify()) && localStorage.getItem("tokenBM"));
+function Discography (){
+  const [albums, setAlbums] = useState([])
+  const [filters, setFilter] = useState([
+    { type: "all", active: true },
+    { type: "album", active: false },
+    { type: "single", active: false }])
+  const [albumr, setAlbumr] = useState("")
 
-    let myHeaders = new Headers();
-    myHeaders.append("Authorization", `Bearer ${key}`);
 
-    let requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow"
-    };
-    fetch(
-      `https://api.spotify.com/v1/artists/${artists}/albums`,
-      requestOptions
-    )
-      .then(response => response.text())
-      .then(result => {
-        let resultobj = JSON.parse(result);
-        if (resultobj.error) {
-          throw resultobj.error;
-        }
-        let albumsd = resultobj.items;
-        this.setState({
-          albums: this.state.albums.concat(
+  useEffect(()=>{
+    const  getAlbums = async (artists, firstTry = true)=> {
+      let key =
+        localStorage.getItem("tokenBM") ||
+        (!(await tokenSpotify()) && localStorage.getItem("tokenBM"));
+  
+      let myHeaders = new Headers();
+      myHeaders.append("Authorization", `Bearer ${key}`);
+  
+      let requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow"
+      };
+      fetch(
+        `https://api.spotify.com/v1/artists/${artists}/albums`,
+        requestOptions
+      )
+        .then(response => response.text())
+        .then(result => {
+          let resultobj = JSON.parse(result);
+          if (resultobj.error) {
+            throw resultobj.error;
+          }
+          let albumsd = resultobj.items;
+          setAlbums(albums.concat(
             albumsd.reduce(
               (unique, item) =>
                 unique.map(i => i.name).includes(item.name)
@@ -46,28 +45,26 @@ class Discography extends Component {
                   : [...unique, item],
               []
             )
-          )
+          ))
+        })
+        .catch(error => {
+          if (
+            error.status === 401 &&
+            error.message === "The access token expired"
+          ) {
+            localStorage.removeItem("tokenBM");
+            if (firstTry) getAlbums(artists, false);
+            /*for refresh the token only 1 time */
+          }
         });
-      })
-      .catch(error => {
-        if (
-          error.status === 401 &&
-          error.message === "The access token expired"
-        ) {
-          localStorage.removeItem("tokenBM");
-          if (firstTry) this.getAlbums(artists, false);
-          /*for refresh the token only 1 time */
-        }
-      });
-  }
-  componentDidMount() {
-    this.getAlbums("5Wh3G01Xfxn2zzEZNpuYHH");
-    this.getAlbums("2OIN4qI2EqAsEhrVlnfi02");
-  }
-  filterFunc(filter) {
+    }
+    getAlbums("5Wh3G01Xfxn2zzEZNpuYHH");
+    getAlbums("2OIN4qI2EqAsEhrVlnfi02");
+  },[])
+  const filterFunc =(filter) =>{
     if (filter.active) return;
 
-    let filtersmod = this.state.filters.map(filterunmod =>
+    let filtersmod = filters.map(filterunmod =>
       filterunmod.type === filter.type
         ? { ...filterunmod, active: true }
         : { ...filterunmod, active: false }
@@ -76,7 +73,7 @@ class Discography extends Component {
       filter.type === "all"
         ? a => true
         : filter2comparetype => filter.type === filter2comparetype;
-    let albumsfilters = this.state.albums.map(album =>
+    let albumsfilters = albums.map(album =>
       functfilter(album.album_type)
         ? {
             ...album,
@@ -87,45 +84,45 @@ class Discography extends Component {
             classStyle: " hidden"
           }
     );
-    this.setState({ filters: filtersmod, albums: albumsfilters });
+    setFilter(filtersmod)
+    setAlbums(albumsfilters)
   }
-  render() {
+  const closeDisk =() =>{
+    setAlbumr(false)
+  }
     return (
       <div className="container">
         <h1>Discography</h1>
         <DialogDisk
-          album={this.state.albumr}
-          display={!(this.state.albumr === "")}
-          close={() => this.setState({ albumr: "" })}
+          album={albumr}
+          display={albumr}
+          close={() => closeDisk()}
         />
         <div className="filters">
-          {this.state.filters.map(filter => {
-            return (
+          {filters.map(filter =>(
               <a
                 href={`filter albums by  ${filter.type}`}
                 key={filter.type}
                 style={filter.active ? { color: "#fff301" } : {}}
                 onClick={e => {
                   e.preventDefault();
-                  this.filterFunc(filter);
+                  filterFunc(filter);
                 }}
               >
                 {filter.type}
               </a>
-            );
-          })}
+            ))}
         </div>
         <div className="principal albums">
-          {this.state.albums.map(album =>( 
-            <Tape album={album} />
+          {albums.map(album =>( 
+            <Tape album={album} setAlbumr={setAlbumr}/>
             ))}
         </div>
       </div>
-    );
-  }
+    )
 }
 
-const Tape=({album})=>{
+const Tape=({album, setAlbumr})=>{
   return (
     <div
     key={album.name}
@@ -135,7 +132,7 @@ const Tape=({album})=>{
       src={album.images[0].url}
       alt="album cover"
       onClick={() => {
-        this.setState({ albumr: album });
+        setAlbumr(album)
       }}
     />
     <p onClick={() => this.setState({ albumr: album })}>
