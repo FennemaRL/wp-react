@@ -148,6 +148,9 @@ footer .flexCenter {
   merch{
     margin-bottom: 20px;
   }
+  .merch div a img {
+    width: 95%;
+}
   .merch div a:first-child {
     margin-bottom: 20px;
   }
