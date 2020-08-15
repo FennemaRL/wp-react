@@ -13,53 +13,64 @@ function Discography (){
 
 
   useEffect(()=>{
-    const  getAlbums = async (artists, firstTry = true)=> {
-      let key =
-        localStorage.getItem("tokenBM") ||
-        (!(await tokenSpotify()) && localStorage.getItem("tokenBM"));
-  
-      let myHeaders = new Headers();
-      myHeaders.append("Authorization", `Bearer ${key}`);
-  
-      let requestOptions = {
-        method: "GET",
-        headers: myHeaders,
-        redirect: "follow"
-      };
-      fetch(
-        `https://api.spotify.com/v1/artists/${artists}/albums`,
-        requestOptions
-      )
-        .then(response => response.text())
-        .then(result => {
-          let resultobj = JSON.parse(result);
-          if (resultobj.error) {
-            throw resultobj.error;
+    const getAllAlbums = async()=>{
+        let allalbums= []
+        let withOutRep = new Map();
+        const  getAlbums = async (artists, firstTry = true)=> {
+        let key =
+          localStorage.getItem("tokenBM") ||
+          (!(await tokenSpotify()) && localStorage.getItem("tokenBM"));
+    
+        let myHeaders = new Headers();
+        myHeaders.append("Authorization", `Bearer ${key}`);
+    
+        let requestOptions = {
+          method: "GET",
+          headers: myHeaders,
+          redirect: "follow"
+        };
+        let res = await fetch(
+          `https://api.spotify.com/v1/artists/${artists}/albums`,
+          requestOptions
+        )
+          .then(response => response.text())
+          .then(result => {
+            let resultobj = JSON.parse(result);
+            if (resultobj.error) {
+              throw resultobj.error;
+            }
+            return resultobj.items
+          })
+          .catch(error => {
+            if (
+              error.status === 401 &&
+              error.message === "The access token expired"
+            ) {
+              localStorage.removeItem("tokenBM")
+              if (firstTry) return getAlbums(artists, false)
+              /*for refresh the token only 1 time */
+            }
+          })
+          return res;
+        }
+        let bandAlbums = await getAlbums("5Wh3G01Xfxn2zzEZNpuYHH")
+        
+        bandAlbums.forEach(a=> {
+          if(! withOutRep.has(a.name.toLowerCase())){
+            allalbums.push(a);
+            withOutRep.set(a.name.toLowerCase(),1)
           }
-          let albumsd = resultobj.items;
-          setAlbums(albums.concat(
-            albumsd.reduce(
-              (unique, item) =>
-                unique.map(i => i.name).includes(item.name)
-                  ? unique
-                  : [...unique, item],
-              []
-            )
-          ))
         })
-        .catch(error => {
-          if (
-            error.status === 401 &&
-            error.message === "The access token expired"
-          ) {
-            localStorage.removeItem("tokenBM");
-            if (firstTry) getAlbums(artists, false);
-            /*for refresh the token only 1 time */
+        let alterbandAlbums = await getAlbums("2OIN4qI2EqAsEhrVlnfi02")
+        alterbandAlbums.forEach(a=> {
+          if(! withOutRep.has(a.name.toLowerCase())){
+            allalbums.push(a);
+            withOutRep.set(a.name.toLowerCase(),1)
           }
-        });
+        })
+        setAlbums(allalbums)
     }
-    getAlbums("5Wh3G01Xfxn2zzEZNpuYHH");
-    getAlbums("2OIN4qI2EqAsEhrVlnfi02");
+    getAllAlbums();
   },[])
   const filterFunc =(filter) =>{
     if (filter.active) return;
@@ -115,7 +126,7 @@ function Discography (){
         </div>
         <div className="principal albums">
           {albums.map(album =>( 
-            <Tape album={album} setAlbumr={setAlbumr}/>
+            <Tape key={album.name} album={album} setAlbumr={setAlbumr}/>
             ))}
         </div>
       </div>
