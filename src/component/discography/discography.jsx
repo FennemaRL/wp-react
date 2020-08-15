@@ -116,35 +116,39 @@ class Discography extends Component {
           })}
         </div>
         <div className="principal albums">
-          {this.state.albums.map(album => {
-            return (
-              <div
-                key={album.name}
-                className={"album ".concat(`${album.classStyle}`)}
-              >
-                <img
-                  src={album.images[0].url}
-                  alt="album cover"
-                  onClick={() => {
-                    this.setState({ albumr: album });
-                  }}
-                />
-                <p onClick={() => this.setState({ albumr: album })}>
-                  {album.name}
-                </p>
-                <p
-                  className="color"
-                  onClick={() => this.setState({ albumr: album })}
-                >
-                  {album.release_date}
-                </p>
-              </div>
-            );
-          })}
+          {this.state.albums.map(album =>( 
+            <Tape album={album} />
+            ))}
         </div>
       </div>
     );
   }
 }
 
+const Tape=({album})=>{
+  return (
+    <div
+    key={album.name}
+    className={"album ".concat(`${album.classStyle}`)}
+  >
+    <img
+      src={album.images[0].url}
+      alt="album cover"
+      onClick={() => {
+        this.setState({ albumr: album });
+      }}
+    />
+    <p onClick={() => this.setState({ albumr: album })}>
+      {album.name}
+    </p>
+    <p
+      className="color"
+      onClick={() => this.setState({ albumr: album })}
+    >
+      {album.release_date}
+    </p>
+  </div>
+
+  )
+}
 export default Discography;

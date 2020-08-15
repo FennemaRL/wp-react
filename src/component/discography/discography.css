@@ -47,7 +47,10 @@
 
 @media screen and (max-width: 48em) {
   .filters {
-    width: 40%;
+    width: 60%;
+  }
+  .filters a {
+    padding: 15px;
   }
   .albums {
     margin-left: 0;
