@@ -3,31 +3,13 @@ import axios from "axios";
 import YouTube from "react-youtube";
 
 let configReprod ={
-  playerVars: {autoplay: 0},
-  min: window.innerWidth < 768
+  playerVars: {
+    autoplay: 0,
+    origin: window.location.origin}
  }
 function LatestVideo(){
   
   const [videos, setVideos] = useState([])
-  const [dimensions, setDimensions] = useState({ 
-    height: "400px",
-    width: "60%"
-  })
-  
-  useEffect(()=>{
-    function handleResize() {
-      setDimensions({
-        height: window.innerWidth < 768 ?  300 : 400 ,
-        width: window.innerWidth < 768 ? "95%" :"60%",
-        min: window.innerWidth < 768
-      })
-    }
-      window.addEventListener('resize', handleResize)
-    
-      return ()=> {
-        window.removeEventListener('resize', handleResize)
-      }
-    },[])
   useEffect(()=>{
     let kg = process.env.REACT_APP_GK;
     let bmuid = process.env.REACT_APP_bmuid;
@@ -47,8 +29,9 @@ function LatestVideo(){
             videos.map(video => (
                 <YouTube
                   videoId={video.id.videoId}
-                  opts={{...configReprod, width:dimensions.width, height:dimensions.height, min:dimensions.min}}
+                  opts={configReprod}
                   key={video.id.videoId}
+                  containerClassName={"youtubeContainer"}
                 />
               )
             )}

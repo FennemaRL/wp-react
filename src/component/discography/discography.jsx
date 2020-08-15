@@ -134,6 +134,8 @@ function Discography (){
 }
 
 const Tape=({album, setAlbumr})=>{
+  
+  const openAlbum=()=>{setAlbumr(album)}
   return (
     <div
     key={album.name}
@@ -143,15 +145,15 @@ const Tape=({album, setAlbumr})=>{
       src={album.images[0].url}
       alt="album cover"
       onClick={() => {
-        setAlbumr(album)
+        openAlbum()
       }}
     />
-    <p onClick={() => this.setState({ albumr: album })}>
+    <p onClick={() => {openAlbum()}}>
       {album.name}
     </p>
     <p
       className="color"
-      onClick={() => this.setState({ albumr: album })}
+      onClick={() => {openAlbum()}}
     >
       {album.release_date}
     </p>

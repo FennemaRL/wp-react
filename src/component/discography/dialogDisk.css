@@ -45,7 +45,6 @@ div.dialogDisk {
   width: 50%;
 }
 .songs {
-  height: 5%;
   height: 85%;
   min-width: 280px;
   overflow: auto;
@@ -66,21 +65,24 @@ div.dialogDisk {
     overflow: hidden;
   }
   .diskRevw {
-    width: 100%;
+    width: 84%;
     display: flex;
     height: 80vh;
     flex-direction: column;
-    padding-top: 30px;
+    padding: 0;
+    padding-top: 4vh;
   }
   .diskRevw p {
     font-size: 0.8em;
   }
   .imagenNsongs {
     flex-direction: column;
-    height: 90%;
+
+    justify-content: space-between;
+    height: 79vh;
   }
-  .content {
-    height: 43%;
+  .content{
+    height: 24vh;
   }
   .imagenNsongs img {
     width: 100%;
@@ -94,5 +96,9 @@ div.dialogDisk {
     padding: 0;
     padding-right: 15px;
     text-align: l;
+  }
+  .closebutton {
+    top: 13px;
+    right: 13px;
   }
 }

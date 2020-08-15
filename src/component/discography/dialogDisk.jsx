@@ -62,8 +62,8 @@ const DialogDisk = ({album,close, display}) => {
           <button className="closebutton" onClick={close}>
             X
           </button>
-          <h1>{album.name}</h1>
           <div className="imagenNsongs">
+            <h1>{album.name}</h1>
             <img src={album.images[0].url} alt="" />
             <div className="content">
               <h3>Tracks</h3>
