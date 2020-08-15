@@ -5,12 +5,20 @@ import Concerts from "./concerts";
 import LatestVideo from "./latestvideo";
 import Merch from "./merch";
 
+
+
 class Home extends Component {
   constructor(props) {
     super(props);
     this.secondSref = React.createRef();
   }
-
+  slide =(e)=>{
+    e.preventDefault();
+    window.scrollTo({
+      top: this.secondSref.current.offsetTop - 72.8,
+      behavior: "smooth"
+    });
+}
   render() {
     return (
       <div>
@@ -19,13 +27,7 @@ class Home extends Component {
           <a
             className="dropdown"
             href="/"
-            onClick={e => {
-              e.preventDefault();
-              window.scrollTo({
-                top: this.secondSref.current.offsetTop - 72.8 /*a mejorar */,
-                behavior: "smooth"
-              });
-            }}
+            onClick={this.slide}
           >
             <img src={ad} id="actionCall" alt="scrollToSecondSection" />
           </a>

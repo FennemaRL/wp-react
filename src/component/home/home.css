@@ -120,7 +120,13 @@ footer h3 {
 footer .flexCenter {
   min-width: 270px;
 }
-
+.subSection h1{
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.881);
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
 @media screen and (max-width: 48em) {
   .bgPrincipal {
     margin-top: 8vh;
@@ -138,6 +144,12 @@ footer .flexCenter {
   }
   .merch div {
     flex-wrap: wrap;
+  }
+  div.merch{
+    margin-bottom: 20px;
+  }
+  .merch div a {
+    margin-bottom: 20px;
   }
   footer {
     flex-direction: column;

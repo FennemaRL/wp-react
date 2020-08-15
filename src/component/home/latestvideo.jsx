@@ -38,8 +38,7 @@ class LatestVideo extends Component {
     const config = this.state.videoSize;
     return (
       <div>
-        <h1>LatestVideo</h1>
-        <div style={{ paddingTop: "25px" }}>
+        <h1>Latest Video</h1>
           {videos.length &&
             videos.map(video => {
               return (
@@ -51,7 +50,6 @@ class LatestVideo extends Component {
                 />
               );
             })}
-        </div>
       </div>
     );
   }

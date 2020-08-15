@@ -7,10 +7,10 @@ const Components = () => {
 
   useEffect(() => {
     axios
-      .get("https://kanban-api-node.herokuapp.com/cbm")
+      .get(process.env.REACT_APP_URL_EVENT)
       .then(r => setConcerts(r.data.concerts))
       .catch(e => new Error(e));
-  }, []); /*falta completar las fechas  */
+  }, []);
   return (
     !!concerts.length && (
       <div className="concerts">
@@ -24,7 +24,7 @@ const Components = () => {
             </tr>
           </thead>
           <tbody>
-            {concerts.map((concert, k) => {
+            {concerts.map(concert => {
               return (
                 <React.Fragment key={concert.date}>
                   <tr>
