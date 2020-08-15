@@ -78,7 +78,6 @@ div.dialogDisk {
   .imagenNsongs {
     flex-direction: column;
     height: 90%;
-    width: 95%;
   }
   .content {
     height: 43%;
