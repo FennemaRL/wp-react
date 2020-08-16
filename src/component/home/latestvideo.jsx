@@ -5,7 +5,7 @@ import YouTube from "react-youtube";
 let configReprod ={
   playerVars: {
     autoplay: 0,
-    origin: window.location.origin}
+    origin: window.location.origin + "/BandMaidFP"}
  }
 function LatestVideo(){
   
@@ -22,6 +22,8 @@ function LatestVideo(){
         })
         .catch(e => () => {});
   },[])
+  
+  console.log(configReprod.playerVars.origin)
   return (
       <div>
         <h1>Latest Video</h1>

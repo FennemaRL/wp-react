@@ -74,7 +74,6 @@ a:hover {
 }
 .buttonToggle {
   height: 20px;
-  width: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -94,38 +93,39 @@ a:hover {
   width: 25px;
   height: 2px;
   transform: rotate(0deg);
-  transition: transform 0.7s ease;
+  transition: all 0.7s ease;
 }
 .buttonToggle .line:nth-child(2) {
   opacity: 1;
   transition: opacity 1.5s ease;
 }
 .line.rotate:first-child {
-  width: 25px;
-  transform: rotate(-47deg) translateY(4px) translateX(-5px);
-  transition: transform 0.7s ease;
+  width: 30px;
+  transform: rotate(-45deg) translateY(3px) translateX(-6px);
+  transition: all 0.7s ease;
 }
 .line.rotate:nth-child(2) {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 .line.rotate:last-child {
-  width: 25px;
-  transform: rotate(47deg) translateY(-4px) translateX(-4px);
-  transition: transform 0.7s ease;
+  width: 30px;
+  transform: rotate(45deg) translateY(-4px) translateX(-6px);
+  transition: all 0.7s ease;
 }
 @media screen and (max-width: 48em) {
   .logoWidth {
     padding: 0;
+    margin: 0;
   }
   .buttonWrap {
-    top: 1.5vh;
+    top: 15px;
     right: 1.5vh;
     position: absolute;
     display: block;
   }
   .logoWrap {
-    margin-top: 0.2vh;
+    margin-top: 10px;
   }
   header {
     justify-content: space-evenly;
