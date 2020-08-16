@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/BandMaidFP/precache-manifest.4ececc718afe7e6640be89dd63ab4082.js"
+  "/BandMaidFP/precache-manifest.9b348e0d367f147d84349f2ebbb5f763.js"
 );
 
 self.addEventListener('message', (event) => {
